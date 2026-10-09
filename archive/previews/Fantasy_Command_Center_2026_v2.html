@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantasy Command Center 2026</title>
+<style>
+:root{
+ --bg:#07101f;--panel:#0e1930;--panel2:#121f3b;--line:#243455;--text:#eef4ff;--muted:#94a8c8;
+ --accent:#58d2f2;--accent2:#9c8cff;--good:#4bd5a0;--warn:#f6c85f;--bad:#ff7d8e;--shadow:0 12px 30px rgba(0,0,0,.22);
+ --chart1:#58d2f2;--chart2:#9c8cff;--chart3:#4bd5a0;--chart4:#f6c85f;
+}
+body.light{
+ --bg:#f2f5fa;--panel:#ffffff;--panel2:#f7f9fd;--line:#d8e0ed;--text:#14213a;--muted:#66758c;
+ --shadow:0 8px 24px rgba(30,55,90,.10);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+button,select,input{font:inherit}.app{max-width:1580px;margin:auto;padding:18px}
+.header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;margin-bottom:14px}
+.title h1{margin:0;font-size:30px;letter-spacing:-.03em}.title p{margin:7px 0 0;color:var(--muted);font-size:13px}
+.header-actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn,.tab,.chip,.select,.search{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;min-height:42px;padding:0 12px}
+.btn,.tab,.chip{cursor:pointer}.btn:hover,.tab:hover,.chip:hover{border-color:#5573a6}
+.btn.primary{background:var(--accent);color:#06131e;border-color:transparent;font-weight:800}.btn.ghost{background:transparent}
+.filters{display:grid;grid-template-columns:minmax(240px,1.2fr) minmax(180px,.8fr) auto auto;gap:10px;margin-bottom:12px}
+.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.select,.search{width:100%;padding:0 10px}.weekset{display:flex;gap:6px;align-items:flex-end;padding-bottom:1px}.chip{height:42px}.chip.active{background:var(--accent);color:#07101f;border-color:transparent;font-weight:800}
+.nav{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.tab{height:40px}.tab.active{background:var(--panel2);border-color:var(--accent);color:var(--accent)}
+.page{display:none}.page.active{display:block}.grid{display:grid;gap:12px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:var(--shadow);min-width:0}
+.card.flat{box-shadow:none}.section-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px}.section-title h2,.section-title h3{font-size:16px;margin:0}
+.muted{color:var(--muted)}.small{font-size:12px}.tiny{font-size:11px}.good{color:var(--good)}.bad{color:var(--bad)}.warn{color:var(--warn)}.accent{color:var(--accent)}
+.kpi .label{color:var(--muted);text-transform:uppercase;font-size:10px;letter-spacing:.09em}.kpi .value{font-size:27px;font-weight:850;margin:5px 0}.kpi .sub{font-size:12px;color:var(--muted)}
+.league-card{cursor:pointer;position:relative;overflow:hidden;transition:transform .15s ease,border-color .15s ease}.league-card:hover{transform:translateY(-2px);border-color:#486694}.league-card.selected{border-color:var(--accent)}
+.league-card.pending{opacity:.68;cursor:default}.platform{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.team-name{font-size:18px;font-weight:800;margin:5px 0}
+.record{font-size:30px;font-weight:900;letter-spacing:-.04em}.rankline{display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:12px}
+.badge{border-radius:999px;padding:4px 8px;font-size:10px;font-weight:800;display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line)}
+.badge.high{background:rgba(255,125,142,.12);color:var(--bad)}.badge.medium{background:rgba(246,200,95,.12);color:var(--warn)}.badge.low{background:rgba(75,213,160,.12);color:var(--good)}.badge.pending{color:var(--muted)}
+.action-card{border-left:4px solid var(--accent)}.action-card.high{border-left-color:var(--bad)}.action-card.medium{border-left-color:var(--warn)}.action-card.low{border-left-color:var(--good)}
+.action-card h3{margin:5px 0 8px;font-size:16px}.action-card p{margin:6px 0;line-height:1.45;font-size:13px}
+.chartbox{min-height:280px;position:relative}.chart-empty{height:250px;display:grid;place-items:center;color:var(--muted)}
+.bar-row{display:grid;grid-template-columns:minmax(125px,1.05fr) 3fr 58px;gap:9px;align-items:center;margin:9px 0;font-size:12px}
+.bar-track{height:11px;border-radius:8px;background:var(--panel2);overflow:hidden;position:relative}.bar-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--chart1),var(--chart2));transition:width .35s ease}
+.bar-row.clickable{cursor:pointer;padding:3px;border-radius:7px}.bar-row.clickable:hover{background:var(--panel2)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:11px;margin-top:9px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px}
+.line-svg{width:100%;height:auto;min-height:230px}.line-svg text{fill:var(--muted);font-size:10px}.gridline{stroke:var(--line);stroke-width:1}.axis{stroke:var(--line);stroke-width:1.2}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;max-height:620px}table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{position:sticky;top:0;background:var(--panel2);z-index:1;color:#b7c7e3;font-size:11px;text-transform:uppercase;letter-spacing:.04em}tbody tr:hover{background:var(--panel2)}
+.row-user{background:rgba(88,210,242,.08)}.row-user td:first-child{border-left:3px solid var(--accent)}
+.pos-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.pos-card{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:10px;text-align:center}.pos-card .p{font-size:11px;color:var(--muted)}.pos-card .v{font-size:20px;font-weight:850;margin-top:4px}
+.statusbar{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}.statusitem{background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:11px;color:var(--muted)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-bottom:10px}.toolbar .field{min-width:140px}.toolbar .search{min-width:220px}
+.note{padding:10px 12px;border-radius:10px;background:var(--panel2);border:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.5}
+.source{display:grid;grid-template-columns:140px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.source:last-child{border-bottom:0}
+.spark{height:44px;width:130px}.priority-list{display:grid;gap:8px}.priority-item{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:10px;background:var(--panel2);border-radius:10px}.num{width:30px;height:30px;border-radius:9px;background:#1b2d51;display:grid;place-items:center;font-weight:850;color:#dbe8ff}
+.tooltip{position:fixed;pointer-events:none;background:#050a14;color:white;border:1px solid #33476e;border-radius:8px;padding:7px 9px;font-size:11px;z-index:999;display:none;max-width:240px;box-shadow:0 8px 25px rgba(0,0,0,.3)}
+.footer{margin:18px 0 4px;color:var(--muted);font-size:11px;line-height:1.5}
+@media(max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.pos-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:650px){.app{padding:10px}.title h1{font-size:23px}.g4{grid-template-columns:1fr 1fr}.filters{grid-template-columns:1fr}.pos-grid{grid-template-columns:repeat(2,1fr)}.bar-row{grid-template-columns:100px 1fr 48px}.source{grid-template-columns:1fr}.toolbar .field,.toolbar .search{min-width:100%;width:100%}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+ <div class="header">
+   <div class="title"><h1>Fantasy Command Center 2026</h1><p>BI consolidado • Sleeper + ESPN • filtros, comparações e ações prioritárias</p></div>
+   <div class="header-actions">
+     <button class="btn ghost" id="themeBtn" type="button">☀️ Tema claro</button>
+     <button class="btn" id="resetBtn" type="button">↺ Limpar filtros</button>
+   </div>
+ </div>
+
+ <div class="filters">
+  <div class="field"><label>Liga</label><select class="select" id="leagueFilter"></select></div>
+  <div class="field"><label>Métrica de comparação</label>
+   <select class="select" id="metricFilter">
+    <option value="relativeIndex">Índice vs média da liga</option>
+    <option value="pf">Pontos acumulados</option>
+    <option value="ppg">Pontos por jogo</option>
+    <option value="winPct">Aproveitamento</option>
+   </select>
+  </div>
+  <div class="field"><label>Semanas</label><div class="weekset" id="weekSet"></div></div>
+  <div class="field"><label>&nbsp;</label><button class="btn primary" id="allLeaguesBtn" type="button">Comparar ligas</button></div>
+ </div>
+
+ <div class="nav">
+   <button class="tab active" data-page="overview" type="button">Visão geral</button>
+   <button class="tab" data-page="standings" type="button">Classificação</button>
+   <button class="tab" data-page="weekly" type="button">Desempenho semanal</button>
+   <button class="tab" data-page="roster" type="button">Elencos</button>
+   <button class="tab" data-page="positions" type="button">Força por posição</button>
+   <button class="tab" data-page="sources" type="button">Fontes</button>
+ </div>
+
+ <div class="statusbar" id="statusbar"></div>
+
+ <section id="overview" class="page active">
+   <div class="grid g4" id="leagueCards"></div>
+   <div class="grid g4" id="globalKpis" style="margin-top:12px"></div>
+   <div class="grid g2" style="margin-top:12px">
+     <div class="card"><div class="section-title"><h2 id="compareTitle">Comparação normalizada</h2><span class="small muted">Clique numa barra para filtrar</span></div><div class="chartbox" id="comparisonChart"></div></div>
+     <div class="card"><div class="section-title"><h2>Evolução semanal</h2><span class="small muted" id="weeklyHint">Índice semanal vs média da própria liga</span></div><div class="chartbox" id="overviewLine"></div></div>
+   </div>
+   <div style="margin-top:12px"><div class="section-title"><h2>Central de ações</h2><span class="small muted">Prioridades derivadas dos dados importados</span></div><div class="grid g3" id="actions"></div></div>
+ </section>
+
+ <section id="standings" class="page">
+   <div class="card">
+    <div class="section-title"><h2>Classificação da liga</h2><button class="btn" id="standingsCsv" type="button">⇩ Exportar CSV</button></div>
+    <div class="toolbar">
+      <div class="field"><label>Ordenar por</label><select class="select" id="standSort"><option value="standing">Recorde</option><option value="pf">Pontos</option><option value="winPct">Aproveitamento</option></select></div>
+      <div class="field"><label>Mostrar</label><select class="select" id="standCount"><option value="12">Top 12</option><option value="6">Top 6</option><option value="999">Todos</option></select></div>
+    </div>
+    <div class="grid g2">
+      <div class="chartbox" id="standChart"></div>
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Time</th><th>W-L</th><th>PF</th><th>PPG</th><th>Win%</th><th>Extra</th></tr></thead><tbody id="standRows"></tbody></table></div>
+    </div>
+   </div>
+ </section>
+
+ <section id="weekly" class="page">
+   <div class="grid g2">
+    <div class="card"><div class="section-title"><h2>Pontuação por semana</h2><span class="small muted">Filtros W1–W3 no topo</span></div><div class="chartbox" id="weeklyChart"></div></div>
+    <div class="card"><div class="section-title"><h2>Resumo das semanas</h2></div><div class="table-wrap"><table><thead><tr><th>Liga</th><th>Semana</th><th>Pontos</th><th>Média liga</th><th>Índice</th><th>Resultado</th></tr></thead><tbody id="weeklyRows"></tbody></table></div></div>
+   </div>
+ </section>
+
+ <section id="roster" class="page">
+   <div class="card">
+    <div class="section-title"><h2>Elencos consolidados</h2><button class="btn" id="rosterCsv" type="button">⇩ Exportar CSV filtrado</button></div>
+    <div class="toolbar">
+      <div class="field"><label>Posição</label><select class="select" id="posFilter"><option value="ALL">Todas</option><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>K</option><option value="DEF">DEF/DST</option></select></div>
+      <div class="field"><label>Status</label><select class="select" id="statusFilter"><option value="ALL">Todos</option><option>Starter</option><option>Bench</option><option>Reserve</option><option>ESPN</option></select></div>
+      <div class="field" style="flex:1"><label>Buscar jogador</label><input class="search" id="playerSearch" placeholder="Digite nome, time NFL ou posição"></div>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th>Liga</th><th>Jogador</th><th>Pos</th><th>NFL</th><th>Status</th><th>PPG 3W</th><th>Proj. W4</th><th>Valor/Rank ESPN</th></tr></thead><tbody id="rosterRows"></tbody></table></div>
+   </div>
+ </section>
+
+ <section id="positions" class="page">
+   <div class="grid g2">
+    <div class="card"><div class="section-title"><h2>Mapa posicional</h2><span class="small muted" id="posNote"></span></div><div id="posCards" class="pos-grid"></div></div>
+    <div class="card"><div class="section-title"><h2>Visualização</h2></div><div class="chartbox" id="posChart"></div></div>
+   </div>
+   <div class="card" style="margin-top:12px"><div class="section-title"><h2>Leitura recomendada</h2></div><div id="posAdvice"></div></div>
+ </section>
+
+ <section id="sources" class="page">
+   <div class="card"><div class="section-title"><h2>Fontes de dados</h2><span class="small muted">Estrutura pronta para novas atualizações</span></div><div id="sourceRows"></div></div>
+   <div class="note" style="margin-top:12px">Nas ligas Sleeper, o arquivo traz rosters, standings, resultados, projeções e transações. Na ESPN pública, o CSG traz roster, força posicional, resultados e power ranking. A liga ESPN privada permanece como fonte pendente e poderá ser adicionada sem refazer o dashboard.</div>
+ </section>
+
+ <div class="footer">Arquivo HTML local e autocontido. Os filtros rodam somente no navegador; nenhum dado é enviado para serviços externos.</div>
+</div>
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const DATA = {"generated":"30/09/2026","leagues":[{"id":"sleeper1","platform":"Sleeper","name":"Paga PPR","team":"RJ Outlaws","scoring":"PPR","loaded":true,"freshness":"Resultados até W3 • projeções W4","user":{"owner":"Dougms","wins":0,"losses":3,"games":3,"winPct":0,"pf":274.9,"highScores":0,"allPlayW":1,"allPlayL":32,"allPlayPct":0.02,"pfRank":12,"leagueTeams":12,"leaguePfAvg":401.29,"ppg":91.63,"leaguePpgAvg":133.76,"relativeIndex":68.5,"standingRank":12},"weekly":[{"week":1,"score":96.02,"opp":"eeduandrade","oppScore":147.96,"result":"L","margin":-51.94,"leagueAvg":138.29},{"week":2,"score":92.62,"opp":"PedroQuintao","oppScore":164.28,"result":"L","margin":-71.66,"leagueAvg":132.0},{"week":3,"score":86.26,"opp":"RaphaelAzevedo","oppScore":138.54,"result":"L","margin":-52.28,"leagueAvg":131.0}],"standings":[{"owner":"romeutips","wins":3,"losses":0,"games":3,"winPct":1,"pf":503.84,"highScores":2,"allPlayW":30,"allPlayL":3,"allPlayPct":0.682},{"owner":"Danieu","wins":3,"losses":0,"games":3,"winPct":1,"pf":435.46,"highScores":0,"allPlayW":22,"allPlayL":11,"allPlayPct":0.5},{"owner":"gerardxcsc","wins":3,"losses":0,"games":3,"winPct":1,"pf":410.54,"highScores":0,"allPlayW":20,"allPlayL":13,"allPlayPct":0.455},{"owner":"matheusoarescbarbosa","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":447.2,"highScores":1,"allPlayW":22,"allPlayL":11,"allPlayPct":0.5},{"owner":"PedroQuintao","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":432.48,"highScores":1,"allPlayW":21,"allPlayL":12,"allPlayPct":0.477},{"owner":"PatsNationz","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":409.08,"highScores":0,"allPlayW":18,"allPlayL":15,"allPlayPct":0.409},{"owner":"yan1899","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":417.7,"highScores":0,"allPlayW":20,"allPlayL":13,"allPlayPct":0.455},{"owner":"RaphaelAzevedo","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":385.04,"highScores":0,"allPlayW":12,"allPlayL":21,"allPlayPct":0.273},{"owner":"eeduandrade","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":338.22,"highScores":0,"allPlayW":8,"allPlayL":25,"allPlayPct":0.182},{"owner":"Saturnian","wins":0,"losses":3,"games":3,"winPct":0,"pf":381.9,"highScores":0,"allPlayW":12,"allPlayL":21,"allPlayPct":0.273},{"owner":"vitorlopes","wins":0,"losses":3,"games":3,"winPct":0,"pf":379.12,"highScores":0,"allPlayW":12,"allPlayL":21,"allPlayPct":0.273},{"owner":"Dougms","wins":0,"losses":3,"games":3,"winPct":0,"pf":274.9,"highScores":0,"allPlayW":1,"allPlayL":32,"allPlayPct":0.023,"pfRank":12,"leagueTeams":12,"leaguePfAvg":401.29,"ppg":91.63333333333333,"leaguePpgAvg":133.76333333333335,"relativeIndex":68.50407436018838}],"roster":[{"slot":"Bench","starterSlot":null,"player":"Xavier Hutchinson","pos":"WR","nfl":"HOU","age":26,"projW4":5.65,"ppg3":null},{"slot":"Starter","starterSlot":"RB","player":"Bucky Irving","pos":"RB","nfl":"TB","age":24,"projW4":14.24,"ppg3":13.7},{"slot":"Starter","starterSlot":"FLEX","player":"Blake Corum","pos":"RB","nfl":"LAR","age":25,"projW4":7.0,"ppg3":6.37},{"slot":"Starter","starterSlot":"FLEX","player":"Malik Washington","pos":"WR","nfl":"MIA","age":25,"projW4":8.87,"ppg3":null},{"slot":"Starter","starterSlot":"WR","player":"Xavier Worthy","pos":"WR","nfl":"KC","age":23,"projW4":9.71,"ppg3":7.43},{"slot":"Bench","starterSlot":null,"player":"Roman Wilson","pos":"WR","nfl":"PIT","age":25,"projW4":5.16,"ppg3":null},{"slot":"Bench","starterSlot":null,"player":"Brian Thomas","pos":"WR","nfl":"JAX","age":23,"projW4":7.71,"ppg3":5.27},{"slot":"Starter","starterSlot":"K","player":"Cam Little","pos":"K","nfl":"JAX","age":23,"projW4":6.2,"ppg3":7.67},{"slot":"Starter","starterSlot":"RB","player":"Cam Skattebo","pos":"RB","nfl":"NYG","age":24,"projW4":15.55,"ppg3":13.0},{"slot":"Starter","starterSlot":"TE","player":"Travis Kelce","pos":"TE","nfl":"KC","age":36,"projW4":11.77,"ppg3":16.37},{"slot":"Starter","starterSlot":"WR","player":"Chris Godwin","pos":"WR","nfl":"TB","age":30,"projW4":8.93,"ppg3":5.5},{"slot":"Starter","starterSlot":"QB","player":"Sam Darnold","pos":"QB","nfl":"SEA","age":29,"projW4":19.99,"ppg3":null},{"slot":"Bench","starterSlot":null,"player":"Tony Pollard","pos":"RB","nfl":"TEN","age":29,"projW4":9.58,"ppg3":8.5},{"slot":"Bench","starterSlot":null,"player":"Khalil Shakir","pos":"WR","nfl":"BUF","age":26,"projW4":8.22,"ppg3":5.8},{"slot":"Reserve","starterSlot":null,"player":"De'Von Achane","pos":"RB","nfl":"MIA","age":24,"projW4":0.0,"ppg3":8.2},{"slot":"Starter","starterSlot":"DEF","player":"Minnesota Vikings","pos":"DEF","nfl":"MIN","age":null,"projW4":9.67,"ppg3":17.0}],"poscomp":[{"position":"QB","user":29.6,"league":75.53,"delta":-45.93},{"position":"RB","user":65.7,"league":97.15,"delta":-31.45},{"position":"WR","user":37.7,"league":84.86,"delta":-47.16},{"position":"TE","user":49.1,"league":35.74,"delta":13.36},{"position":"FLEX","user":42.8,"league":75.5,"delta":-32.7},{"position":"K","user":23.0,"league":21.45,"delta":1.55},{"position":"DEF","user":27.0,"league":22.55,"delta":4.45}],"summary":{"rosterId":7,"owner":"Dougms","team":"RJ Outlaws","totalPlayers":16,"active":15,"starters":10,"bench":5,"reserve":1,"taxi":0,"openActive":0,"openReserve":1,"openTaxi":0,"QB":1,"RB":5,"WR":7,"TE":1,"K":1,"DEF":1,"avgAge":26.1,"under25":6,"faab":100,"waiver":12},"source":"Cópia de Sleeper Data Export v8.xlsx","action":{"level":"Alta","title":"Reforçar WR/FLEX","detail":"WR (-47,2 pts) e FLEX (-32,7) são os maiores déficits vs. liga; QB histórico também ficou abaixo.","strength":"TE é a maior vantagem posicional (+13,4 pts)."}},{"id":"sleeper2","platform":"Sleeper","name":"SUNDAY NIGHT FUMBLE","team":"Guarus Outlaws","scoring":"Dynasty / Sleeper","loaded":true,"freshness":"Resultados até W3 • projeções W4","user":{"owner":"Dougms","wins":2,"losses":1,"games":3,"winPct":0.67,"pf":354.4,"highScores":0,"allPlayW":15,"allPlayL":18,"allPlayPct":0.34,"pfRank":8,"leagueTeams":12,"leaguePfAvg":376.27,"ppg":118.13,"leaguePpgAvg":125.42,"relativeIndex":94.19,"standingRank":7},"weekly":[{"week":1,"score":123.26,"opp":"HenriqueMathias","oppScore":151.38,"result":"L","margin":-28.12,"leagueAvg":133.32},{"week":2,"score":102.1,"opp":"thiagogth13","oppScore":81.32,"result":"W","margin":20.78,"leagueAvg":116.15},{"week":3,"score":129.04,"opp":"CaduJr","oppScore":125.08,"result":"W","margin":3.96,"leagueAvg":126.79}],"standings":[{"owner":"DereraxAllar","wins":3,"losses":0,"games":3,"winPct":1,"pf":472.86,"highScores":1,"allPlayW":27,"allPlayL":6,"allPlayPct":0.614},{"owner":"MarcusMarques","wins":3,"losses":0,"games":3,"winPct":1,"pf":393.32,"highScores":0,"allPlayW":20,"allPlayL":13,"allPlayPct":0.455},{"owner":"patrickvieira14","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":408.88,"highScores":0,"allPlayW":20,"allPlayL":13,"allPlayPct":0.455},{"owner":"CaduJr","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":390.24,"highScores":0,"allPlayW":20,"allPlayL":13,"allPlayPct":0.455},{"owner":"RaphaelAzevedo","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":388.92,"highScores":1,"allPlayW":14,"allPlayL":19,"allPlayPct":0.318},{"owner":"Rcouto","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":385.48,"highScores":0,"allPlayW":21,"allPlayL":12,"allPlayPct":0.477},{"owner":"Dougms","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":354.4,"highScores":0,"allPlayW":15,"allPlayL":18,"allPlayPct":0.341,"pfRank":8,"leagueTeams":12,"leaguePfAvg":376.2683333333333,"ppg":118.13333333333333,"leaguePpgAvg":125.42277777777777,"relativeIndex":94.18810157644589},{"owner":"RSCALA","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":350.52,"highScores":2,"allPlayW":15,"allPlayL":18,"allPlayPct":0.341},{"owner":"HenriqueMathias","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":340.98,"highScores":0,"allPlayW":10,"allPlayL":23,"allPlayPct":0.227},{"owner":"proffelipelobao","wins":0,"losses":3,"games":3,"winPct":0,"pf":402.18,"highScores":0,"allPlayW":22,"allPlayL":11,"allPlayPct":0.5},{"owner":"thiagogth13","wins":0,"losses":3,"games":3,"winPct":0,"pf":321.66,"highScores":0,"allPlayW":9,"allPlayL":24,"allPlayPct":0.205},{"owner":"Acmalva","wins":0,"losses":3,"games":3,"winPct":0,"pf":305.78,"highScores":0,"allPlayW":5,"allPlayL":28,"allPlayPct":0.114}],"roster":[{"slot":"Bench","starterSlot":null,"player":"Jayden Reed","pos":"WR","nfl":"GB","age":26,"projW4":0.0,"ppg3":1.47},{"slot":"Starter","starterSlot":"TE","player":"Sam LaPorta","pos":"TE","nfl":"DET","age":25,"projW4":8.57,"ppg3":9.13},{"slot":"Bench","starterSlot":null,"player":"Adonai Mitchell","pos":"WR","nfl":"NYJ","age":23,"projW4":0.27,"ppg3":5.6},{"slot":"Bench","starterSlot":null,"player":"Marvin Harrison","pos":"WR","nfl":"ARI","age":24,"projW4":4.51,"ppg3":3.1},{"slot":"Starter","starterSlot":"WR","player":"Malik Nabers","pos":"WR","nfl":"NYG","age":23,"projW4":11.46,"ppg3":5.2},{"slot":"Bench","starterSlot":null,"player":"George Holani","pos":"RB","nfl":"SEA","age":26,"projW4":4.41,"ppg3":5.15},{"slot":"Starter","starterSlot":"FLEX","player":"Woody Marks","pos":"RB","nfl":"HOU","age":25,"projW4":7.84,"ppg3":12.03},{"slot":"Starter","starterSlot":"RB","player":"Cam Skattebo","pos":"RB","nfl":"NYG","age":24,"projW4":14.52,"ppg3":11.03},{"slot":"Starter","starterSlot":"K","player":"Tyler Loop","pos":"K","nfl":"BAL","age":25,"projW4":7.76,"ppg3":9.67},{"slot":"Taxi","starterSlot":null,"player":"Nicholas Singleton","pos":"RB","nfl":"TEN","age":22,"projW4":1.68,"ppg3":0.33},{"slot":"Taxi","starterSlot":null,"player":"Antonio Williams","pos":"WR","nfl":"WAS","age":22,"projW4":3.81,"ppg3":3.2},{"slot":"Reserve","starterSlot":null,"player":"Jonah Coleman","pos":"RB","nfl":"DEN","age":23,"projW4":0.0,"ppg3":5.33},{"slot":"Bench","starterSlot":null,"player":"Chris Moore","pos":"WR","nfl":"BAL","age":33,"projW4":1.63,"ppg3":6.9},{"slot":"Bench","starterSlot":null,"player":"Kalif Raymond","pos":"WR","nfl":"CHI","age":32,"projW4":10.64,"ppg3":14.5},{"slot":"Starter","starterSlot":"QB","player":"Patrick Mahomes","pos":"QB","nfl":"KC","age":31,"projW4":21.28,"ppg3":23.19},{"slot":"Starter","starterSlot":"FLEX","player":"Javonte Williams","pos":"RB","nfl":"DAL","age":26,"projW4":13.7,"ppg3":15.17},{"slot":"Bench","starterSlot":null,"player":"Wan'Dale Robinson","pos":"WR","nfl":"TEN","age":25,"projW4":7.9,"ppg3":7.63},{"slot":"Starter","starterSlot":"RB","player":"James Cook","pos":"RB","nfl":"BUF","age":27,"projW4":16.26,"ppg3":16.07},{"slot":"Reserve","starterSlot":null,"player":"Alec Pierce","pos":"WR","nfl":"IND","age":26,"projW4":0.0,"ppg3":3.23},{"slot":"Starter","starterSlot":"WR","player":"Rashid Shaheed","pos":"WR","nfl":"SEA","age":28,"projW4":12.52,"ppg3":11.47},{"slot":"Bench","starterSlot":null,"player":"DeMario Douglas","pos":"WR","nfl":"NE","age":25,"projW4":4.88,"ppg3":3.4},{"slot":"Bench","starterSlot":null,"player":"Kendre Miller","pos":"RB","nfl":"NO","age":24,"projW4":7.07,"ppg3":2.35},{"slot":"Starter","starterSlot":"DEF","player":"Kansas City Chiefs","pos":"DEF","nfl":"KC","age":null,"projW4":23.88,"ppg3":16.76}],"poscomp":[{"position":"QB","user":69.58,"league":56.78,"delta":12.8},{"position":"RB","user":88.9,"league":84.35,"delta":4.55},{"position":"WR","user":24.9,"league":73.75,"delta":-48.85},{"position":"TE","user":27.4,"league":24.53,"delta":2.87},{"position":"FLEX","user":62.2,"league":61.0,"delta":1.2},{"position":"K","user":29.0,"league":23.27,"delta":5.73},{"position":"DEF","user":52.42,"league":54.58,"delta":-2.16}],"summary":{"rosterId":9,"owner":"Dougms","team":"Guarus Outlaws","totalPlayers":23,"active":19,"starters":10,"bench":9,"reserve":2,"taxi":2,"openActive":1,"openReserve":1,"openTaxi":2,"QB":1,"RB":8,"WR":11,"TE":1,"K":1,"DEF":1,"avgAge":25.7,"under25":8,"faab":1000,"waiver":2},"source":"Cópia de Sleeper Data Export (LIGA2).xlsx","action":{"level":"Média","title":"Reforçar WR","detail":"WR está -48,9 pts abaixo da média dos outros times, enquanto QB/RB/FLEX estão acima ou perto da média.","strength":"QB, RB, TE, FLEX e K estão acima da média da liga."}},{"id":"espn1","platform":"ESPN","name":"ESPN • League 1088464775","team":"RJ Outlaws","scoring":"0.5 PPR","loaded":true,"freshness":"Resultados até W3","user":{"id":3,"team":"RJ Outlaws","wins":3,"losses":0,"pf":406.5,"ppg":135.5,"record":"3-0","powerRank":1,"pfRank":1,"leagueTeams":12,"leaguePfAvg":311.71,"leaguePpgAvg":103.91,"relativeIndex":130.4,"standingRank":1},"weekly":[{"week":1,"score":117.0,"leagueAvg":110.0},{"week":2,"score":126.5,"leagueAvg":102.0},{"week":3,"score":163.0,"leagueAvg":99.71}],"standings":[{"owner":"Tulio_SEA","wins":0,"losses":3,"games":3,"winPct":0.0,"pf":266.5,"ppg":88.8,"powerRank":11},{"owner":"Chico Bento Football Club","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":297.0,"ppg":99.0,"powerRank":7},{"owner":"RJ Outlaws","wins":3,"losses":0,"games":3,"winPct":1.0,"pf":406.5,"ppg":135.5,"powerRank":1},{"owner":"Brady's 7 Rings Warriors","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":381.5,"ppg":127.2,"powerRank":3},{"owner":"Legion of Boom","wins":0,"losses":3,"games":3,"winPct":0.0,"pf":305.0,"ppg":101.7,"powerRank":8},{"owner":"Gerardoyotakuserieb","wins":3,"losses":0,"games":3,"winPct":1.0,"pf":364.0,"ppg":121.3,"powerRank":2},{"owner":"Last Dance","wins":0,"losses":3,"games":3,"winPct":0.0,"pf":214.5,"ppg":71.5,"powerRank":12},{"owner":"CECEdu","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":345.5,"ppg":115.2,"powerRank":5},{"owner":"SAF","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":225.5,"ppg":75.2,"powerRank":9},{"owner":"ZiyechBFR","wins":2,"losses":1,"games":3,"winPct":0.667,"pf":312.5,"ppg":104.2,"powerRank":6},{"owner":"Saint Louis Sharks","wins":3,"losses":0,"games":3,"winPct":1.0,"pf":354.0,"ppg":118.0,"powerRank":4},{"owner":"Franca Sapateiros","wins":1,"losses":2,"games":3,"winPct":0.333,"pf":268.0,"ppg":89.3,"powerRank":10}],"roster":[{"player":"Jahmyr Gibbs","pos":"RB","nfl":"DET","rosValue":10256.1,"posRank":"RB1","teamRank":1},{"player":"Drake London","pos":"WR","nfl":"ATL","rosValue":7380.7,"posRank":"WR1","teamRank":2},{"player":"Javonte Williams","pos":"RB","nfl":"DAL","rosValue":5188.1,"posRank":"RB2","teamRank":3},{"player":"Davante Adams","pos":"WR","nfl":"LAR","rosValue":3479.5,"posRank":"WR3","teamRank":5},{"player":"Tee Higgins","pos":"WR","nfl":"CIN","rosValue":4835.0,"posRank":"WR2","teamRank":4},{"player":"Jaylen Warren","pos":"RB","nfl":"PIT","rosValue":2174.7,"posRank":"RB3","teamRank":6},{"player":"Dak Prescott","pos":"QB","nfl":"DAL","rosValue":1844.8,"posRank":"QB1","teamRank":7},{"player":"Stefon Diggs","pos":"WR","nfl":"WAS","rosValue":1153.0,"posRank":"WR4","teamRank":8},{"player":"Isiah Pacheco","pos":"RB","nfl":"DET","rosValue":0.0,"posRank":"RB5","teamRank":14},{"player":"Brock Purdy","pos":"QB","nfl":"SF","rosValue":1126.2,"posRank":"QB2","teamRank":9},{"player":"Packers D/ST","pos":"DST","nfl":"GB","rosValue":0.0,"posRank":"DST1","teamRank":15},{"player":"Dalton Schultz","pos":"TE","nfl":"HOU","rosValue":288.2,"posRank":"TE1","teamRank":10},{"player":"Emmett Johnson","pos":"RB","nfl":"KC","rosValue":250.3,"posRank":"RB4","teamRank":11},{"player":"Elic Ayomanor","pos":"WR","nfl":"TEN","rosValue":15.6,"posRank":"WR5","teamRank":13},{"player":"Jake Bates","pos":"K","nfl":"DET","rosValue":54.3,"posRank":"K1","teamRank":12}],"posRanks":{"QB":9,"RB":1,"WR":5,"TE":12,"K":6,"DEF":12},"rosterOverallRank":2,"source":"Cópia de CSG Power Rankings 2026 ESPN.xlsx","action":{"level":"Baixa","title":"Ajustes pontuais, sem desmontar o núcleo","detail":"Você está 3–0 e 1º em pontos. O ranking de roster aponta TE 12º, DST 12º e QB 9º como setores mais fracos.","strength":"RB é rank 1 da liga; roster geral rank 2 e PF rank 1."}},{"id":"espn2","platform":"ESPN","name":"ESPN • League 286115474","team":"Team ID 14","scoring":"—","loaded":false,"freshness":"Liga privada • importação pendente","source":"Nenhum arquivo importado ainda"}],"meta":{"loadedCount":3,"pendingCount":1,"combinedWins":5,"combinedLosses":4}};
+const loaded = DATA.leagues.filter(l=>l.loaded);
+const state={league:"ALL",metric:"relativeIndex",weeks:new Set([1,2,3]),page:"overview",pos:"ALL",status:"ALL",search:"",standSort:"standing",standCount:12};
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const fmt=(v,d=1)=>v==null?"—":Number(v).toLocaleString("pt-BR",{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=v=>v==null?"—":(v*100).toFixed(1)+"%";
+function getLeague(){return DATA.leagues.find(l=>l.id===state.league)}
+function selectedLoaded(){return state.league==="ALL"?loaded:loaded.filter(l=>l.id===state.league)}
+function urgencyClass(level){return level==="Alta"?"high":level==="Média"?"medium":"low"}
+
+function init(){
+ const lf=$("#leagueFilter");
+ lf.innerHTML=`<option value="ALL">Todas as ligas carregadas</option>`+DATA.leagues.map(l=>`<option value="${l.id}" ${!l.loaded?"disabled":""}>${l.platform} • ${l.team}${!l.loaded?" (pendente)":""}</option>`).join("");
+ [1,2,3].forEach(w=>{const b=document.createElement("button");b.className="chip active";b.textContent="W"+w;b.type="button";b.dataset.week=w;b.addEventListener("click",()=>{state.weeks.has(w)?state.weeks.delete(w):state.weeks.add(w); if(!state.weeks.size)state.weeks.add(w); renderAll();});$("#weekSet").appendChild(b)});
+ lf.addEventListener("change",e=>{state.league=e.target.value;renderAll()});
+ $("#metricFilter").addEventListener("change",e=>{state.metric=e.target.value;renderAll()});
+ $("#allLeaguesBtn").addEventListener("click",()=>{state.league="ALL";lf.value="ALL";renderAll()});
+ $("#resetBtn").addEventListener("click",reset);
+ $("#themeBtn").addEventListener("click",()=>{document.body.classList.toggle("light");$("#themeBtn").textContent=document.body.classList.contains("light")?"🌙 Tema escuro":"☀️ Tema claro"});
+ $$(".tab").forEach(b=>b.addEventListener("click",()=>{state.page=b.dataset.page; $$(".tab").forEach(x=>x.classList.toggle("active",x===b)); $$(".page").forEach(x=>x.classList.toggle("active",x.id===state.page)); renderAll()}));
+ $("#standSort").addEventListener("change",e=>{state.standSort=e.target.value;renderStandings()});
+ $("#standCount").addEventListener("change",e=>{state.standCount=+e.target.value;renderStandings()});
+ $("#posFilter").addEventListener("change",e=>{state.pos=e.target.value;renderRoster()});
+ $("#statusFilter").addEventListener("change",e=>{state.status=e.target.value;renderRoster()});
+ $("#playerSearch").addEventListener("input",e=>{state.search=e.target.value.toLowerCase().trim();renderRoster()});
+ $("#standingsCsv").addEventListener("click",()=>exportStandings());
+ $("#rosterCsv").addEventListener("click",()=>exportRoster());
+ renderAll();
+}
+function reset(){
+ state.league="ALL";state.metric="relativeIndex";state.weeks=new Set([1,2,3]);state.pos="ALL";state.status="ALL";state.search="";state.standSort="standing";state.standCount=12;
+ $("#leagueFilter").value="ALL";$("#metricFilter").value="relativeIndex";$("#posFilter").value="ALL";$("#statusFilter").value="ALL";$("#playerSearch").value="";$("#standSort").value="standing";$("#standCount").value="12";renderAll()
+}
+function renderAll(){
+ $$("#weekSet .chip").forEach(b=>b.classList.toggle("active",state.weeks.has(+b.dataset.week)));
+ renderStatus();renderOverview();renderStandings();renderWeekly();renderRoster();renderPositions();renderSources()
+}
+function renderStatus(){
+ const l=getLeague();
+ const items=[
+   `${DATA.meta.loadedCount} ligas carregadas`,
+   `${DATA.meta.pendingCount} ESPN privada pendente`,
+   l?`${l.platform} • ${l.freshness}`:"Visão consolidada normalizada",
+   `Semanas: ${[...state.weeks].sort().map(w=>"W"+w).join(", ")}`
+ ];
+ $("#statusbar").innerHTML=items.map(x=>`<span class="statusitem">${x}</span>`).join("")
+}
+function renderOverview(){
+ $("#leagueCards").innerHTML=DATA.leagues.map(l=>{
+   if(!l.loaded)return `<div class="card league-card pending"><div class="platform">${l.platform}</div><div class="team-name">${l.team}</div><div class="record">—</div><div class="small muted">${l.name}</div><div class="rankline"><span class="badge pending">PENDENTE</span><span>${l.freshness}</span></div></div>`;
+   const u=l.user, selected=state.league===l.id;
+   return `<div class="card league-card ${selected?"selected":""}" data-league="${l.id}" tabindex="0" role="button">
+     <div class="platform">${l.platform} • ${l.scoring}</div><div class="team-name">${l.team}</div><div class="record">${u.wins}–${u.losses}</div>
+     <div class="small muted">${l.name}</div><div class="rankline"><span>PF rank <b>${u.pfRank}/${u.leagueTeams}</b></span><span>${fmt(u.pf,1)} pts</span></div>
+     <div class="rankline"><span>Índice vs liga</span><b class="${u.relativeIndex>=105?"good":u.relativeIndex<90?"bad":"warn"}">${fmt(u.relativeIndex,0)}</b></div>
+   </div>`
+ }).join("");
+ $$(".league-card[data-league]").forEach(c=>{
+   const go=()=>{state.league=c.dataset.league;$("#leagueFilter").value=state.league;renderAll()};
+   c.addEventListener("click",go);c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}})
+ });
+ const avgIndex=loaded.reduce((a,l)=>a+l.user.relativeIndex,0)/loaded.length;
+ const winning=loaded.filter(l=>l.user.wins>l.user.losses).length;
+ $("#globalKpis").innerHTML=[
+  ["Recorde combinado",`${DATA.meta.combinedWins}–${DATA.meta.combinedLosses}`,"Somente ligas carregadas"],
+  ["Ligas acima de .500",winning,"de "+loaded.length],
+  ["Índice médio",fmt(avgIndex,0),"100 = média da própria liga"],
+  ["Líder de PF",loaded.filter(l=>l.user.pfRank===1).length,"liga(s) com PF rank 1"]
+ ].map(x=>`<div class="card kpi"><div class="label">${x[0]}</div><div class="value">${x[1]}</div><div class="sub">${x[2]}</div></div>`).join("");
+ renderComparison(); renderOverviewLine();
+ const acts=selectedLoaded();
+ $("#actions").innerHTML=acts.map(l=>`<div class="card action-card ${urgencyClass(l.action.level)}">
+   <span class="badge ${urgencyClass(l.action.level)}">${l.action.level.toUpperCase()}</span><h3>${l.team} • ${l.action.title}</h3>
+   <p>${l.action.detail}</p><p class="muted"><b>Ponto forte:</b> ${l.action.strength}</p></div>`).join("");
+}
+function metricValue(l){
+ const u=l.user;if(state.metric==="relativeIndex")return u.relativeIndex;
+ if(state.metric==="pf")return u.pf;if(state.metric==="ppg")return u.ppg;if(state.metric==="winPct")return u.winPct*100;return 0
+}
+function metricLabel(){
+ return {relativeIndex:"Índice vs média da liga (100 = média)",pf:"Pontos acumulados",ppg:"Pontos por jogo",winPct:"Aproveitamento (%)"}[state.metric]
+}
+function renderComparison(){
+ const ls=selectedLoaded(), vals=ls.map(metricValue), max=Math.max(...vals,1)*1.08;
+ $("#compareTitle").textContent=metricLabel();
+ $("#comparisonChart").innerHTML=ls.map(l=>{
+  const v=metricValue(l), w=Math.max(2,v/max*100);
+  return `<div class="bar-row clickable" data-id="${l.id}" title="Clique para abrir ${l.team}"><div><b>${l.team}</b><div class="tiny muted">${l.platform}</div></div><div class="bar-track"><div class="bar-fill" style="width:${w}%"></div></div><div><b>${state.metric==="winPct"?fmt(v,1)+"%":fmt(v,state.metric==="relativeIndex"?0:1)}</b></div></div>`
+ }).join("")+`<div class="legend"><span><i class="dot" style="background:var(--chart1)"></i>${metricLabel()}</span></div>`;
+ $$("#comparisonChart .bar-row").forEach(r=>r.addEventListener("click",()=>{state.league=r.dataset.id;$("#leagueFilter").value=state.league;renderAll()}))
+}
+function svgLine(series, normalized=false){
+ const W=700,H=260,L=48,R=22,T=22,B=38, iw=W-L-R, ih=H-T-B;
+ const all=series.flatMap(s=>s.points.map(p=>p.y)); if(!all.length)return `<div class="chart-empty">Sem dados</div>`;
+ let min=Math.min(...all),max=Math.max(...all); if(normalized){min=Math.min(60,min-5);max=Math.max(140,max+5)} else {min=Math.max(0,min-15);max=max+15}
+ const x=w=>L+((w-1)/2)*iw, y=v=>T+(max-v)/(max-min||1)*ih;
+ let out=`<svg class="line-svg" viewBox="0 0 ${W} ${H}" aria-label="Gráfico de linha">`;
+ for(let i=0;i<=4;i++){let val=min+(max-min)*i/4, yy=y(val);out+=`<line class="gridline" x1="${L}" x2="${W-R}" y1="${yy}" y2="${yy}"/><text x="4" y="${yy+4}">${Math.round(val)}</text>`}
+ [1,2,3].forEach(w=>out+=`<text x="${x(w)-8}" y="${H-13}">W${w}</text>`);
+ if(normalized && min<100 && max>100){let yy=y(100);out+=`<line x1="${L}" x2="${W-R}" y1="${yy}" y2="${yy}" stroke="var(--warn)" stroke-dasharray="5 4"/><text x="${W-82}" y="${yy-5}">média = 100</text>`}
+ const colors=["var(--chart1)","var(--chart2)","var(--chart3)","var(--chart4)"];
+ series.forEach((s,si)=>{const pts=s.points.map(p=>`${x(p.x)},${y(p.y)}`).join(" ");out+=`<polyline points="${pts}" fill="none" stroke="${colors[si%colors.length]}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`;s.points.forEach(p=>{out+=`<circle class="chart-point" data-tip="${s.name} • W${p.x}: ${p.y.toFixed(1)}" cx="${x(p.x)}" cy="${y(p.y)}" r="5" fill="${colors[si%colors.length]}" stroke="var(--panel)" stroke-width="2"/>`})});
+ out+="</svg>"+`<div class="legend">${series.map((s,i)=>`<span><i class="dot" style="background:${colors[i%colors.length]}"></i>${s.name}</span>`).join("")}</div>`;return out
+}
+function bindTips(root){
+ const tip=$("#tooltip"); $$(root+" [data-tip]").forEach(n=>{n.addEventListener("mouseenter",e=>{tip.textContent=n.dataset.tip;tip.style.display="block"});n.addEventListener("mousemove",e=>{tip.style.left=(e.clientX+12)+"px";tip.style.top=(e.clientY+12)+"px"});n.addEventListener("mouseleave",()=>tip.style.display="none")})
+}
+function renderOverviewLine(){
+ const ls=selectedLoaded();
+ const series=ls.map(l=>({name:l.team+" • "+l.platform,points:l.weekly.filter(x=>state.weeks.has(x.week)).map(x=>({x:x.week,y:(x.score/x.leagueAvg)*100}))}));
+ $("#overviewLine").innerHTML=svgLine(series,true);bindTips("#overviewLine")
+}
+function standingsFor(l){
+ const arr=l.standings.map((x,i)=>({...x,team:x.team||x.owner,owner:x.owner||x.team,ppg:x.ppg??(x.pf/(x.games||3))}));
+ if(state.standSort==="pf")arr.sort((a,b)=>b.pf-a.pf);
+ else if(state.standSort==="winPct")arr.sort((a,b)=>b.winPct-a.winPct||b.pf-a.pf);
+ else arr.sort((a,b)=>b.winPct-a.winPct||b.pf-a.pf);
+ return arr
+}
+function renderStandings(){
+ let l=getLeague(); if(!l||!l.loaded)l=loaded[0];
+ if(state.league==="ALL"){$("#standChart").innerHTML=`<div class="chart-empty">Selecione uma liga no filtro superior para ver a classificação detalhada.</div>`;$("#standRows").innerHTML=loaded.map((x,i)=>`<tr class="row-user"><td>${i+1}</td><td>${x.team} <span class="muted">(${x.platform})</span></td><td>${x.user.wins}-${x.user.losses}</td><td>${fmt(x.user.pf,1)}</td><td>${fmt(x.user.ppg,1)}</td><td>${pct(x.user.winPct)}</td><td>PF rank ${x.user.pfRank}/${x.user.leagueTeams}</td></tr>`).join("");return}
+ const arr=standingsFor(l).slice(0,state.standCount), max=Math.max(...arr.map(x=>x.pf),1)*1.05;
+ $("#standChart").innerHTML=arr.map((x,i)=>`<div class="bar-row ${x.team===l.team||x.owner==="Dougms"?"row-user":""}"><div>${i+1}. ${x.team}</div><div class="bar-track"><div class="bar-fill" style="width:${x.pf/max*100}%"></div></div><div>${fmt(x.pf,0)}</div></div>`).join("");
+ $("#standRows").innerHTML=arr.map((x,i)=>`<tr class="${x.team===l.team||x.owner==="Dougms"?"row-user":""}"><td>${i+1}</td><td><b>${x.team}</b></td><td>${x.wins}-${x.losses}</td><td>${fmt(x.pf,1)}</td><td>${fmt(x.ppg,1)}</td><td>${pct(x.winPct)}</td><td>${l.platform==="Sleeper"?`All-play ${x.allPlayW??"—"}-${x.allPlayL??"—"}`:`Power rank ${x.powerRank??"—"}`}</td></tr>`).join("")
+}
+function renderWeekly(){
+ const ls=selectedLoaded(), series=[], rows=[];
+ ls.forEach(l=>{const pts=[];l.weekly.filter(x=>state.weeks.has(x.week)).forEach(x=>{pts.push({x:x.week,y:x.score});rows.push({league:l.team+" • "+l.platform,...x})});series.push({name:l.team+" • "+l.platform,points:pts})});
+ $("#weeklyChart").innerHTML=svgLine(series,false);bindTips("#weeklyChart");
+ rows.sort((a,b)=>a.week-b.week||a.league.localeCompare(b.league));
+ $("#weeklyRows").innerHTML=rows.map(r=>`<tr><td>${r.league}</td><td>W${r.week}</td><td><b>${fmt(r.score,2)}</b></td><td>${fmt(r.leagueAvg,2)}</td><td class="${r.score>=r.leagueAvg?"good":"bad"}">${fmt(r.score/r.leagueAvg*100,0)}</td><td>${r.result??"—"}</td></tr>`).join("")
+}
+function rosterRowsData(){
+ let out=[];
+ selectedLoaded().forEach(l=>{
+  l.roster.forEach(p=>out.push({leagueId:l.id,league:l.team+" • "+l.platform,platform:l.platform,player:p.player,pos:(p.pos==="DST"?"DEF":p.pos),nfl:p.nfl||"—",status:l.platform==="ESPN"?"ESPN":p.slot,starterSlot:p.starterSlot,ppg:p.ppg3,proj:p.projW4,ros:p.rosValue,rank:p.teamRank,posRank:p.posRank}))
+ });
+ return out.filter(r=>(state.pos==="ALL"||r.pos===state.pos) && (state.status==="ALL"||r.status===state.status) && (!state.search||`${r.player} ${r.nfl} ${r.pos}`.toLowerCase().includes(state.search)))
+}
+function renderRoster(){
+ const rows=rosterRowsData();
+ $("#rosterRows").innerHTML=rows.map(r=>`<tr><td>${r.league}</td><td><b>${r.player}</b></td><td>${r.pos}</td><td>${r.nfl}</td><td>${r.status}${r.starterSlot?` • ${r.starterSlot}`:""}</td><td>${r.ppg==null?"—":fmt(r.ppg,2)}</td><td>${r.proj==null?"—":fmt(r.proj,2)}</td><td>${r.platform==="ESPN"?(r.rank?`#${r.rank} time • ${r.posRank}`:"—"):"—"}</td></tr>`).join("") || `<tr><td colspan="8" class="muted">Nenhum jogador com esses filtros.</td></tr>`
+}
+function renderPositions(){
+ let l=getLeague(); if(!l||!l.loaded){$("#posCards").innerHTML=`<div class="note">Selecione uma liga específica para analisar posições.</div>`;$("#posChart").innerHTML=`<div class="chart-empty">Selecione uma liga.</div>`;$("#posAdvice").innerHTML="";$("#posNote").textContent="";return}
+ if(l.platform==="Sleeper"){
+  $("#posNote").textContent="Pontos W1–W3 vs média dos outros times";
+  $("#posCards").innerHTML=l.poscomp.map(p=>`<div class="pos-card"><div class="p">${p.position}</div><div class="v ${p.delta>=0?"good":"bad"}">${p.delta>=0?"+":""}${fmt(p.delta,1)}</div><div class="tiny muted">${fmt(p.user,1)} vs ${fmt(p.league,1)}</div></div>`).join("");
+  const max=Math.max(...l.poscomp.flatMap(p=>[p.user,p.league]),1)*1.1;
+  $("#posChart").innerHTML=l.poscomp.map(p=>`<div class="bar-row"><div><b>${p.position}</b></div><div><div class="bar-track" style="margin-bottom:4px"><div class="bar-fill" style="width:${p.user/max*100}%;background:var(--chart1)"></div></div><div class="bar-track"><div class="bar-fill" style="width:${p.league/max*100}%;background:#637393"></div></div></div><div class="${p.delta>=0?"good":"bad"}">${p.delta>=0?"+":""}${fmt(p.delta,1)}</div></div>`).join("")+`<div class="legend"><span><i class="dot" style="background:var(--chart1)"></i>Seu time</span><span><i class="dot" style="background:#637393"></i>Média dos outros</span></div>`;
+  const neg=[...l.poscomp].sort((a,b)=>a.delta-b.delta).slice(0,3), pos=[...l.poscomp].sort((a,b)=>b.delta-a.delta).slice(0,2);
+  $("#posAdvice").innerHTML=`<div class="priority-list"><div class="priority-item"><div class="num">1</div><div><b>Prioridade: ${neg[0].position}</b><div class="small muted">${fmt(Math.abs(neg[0].delta),1)} pts abaixo da média no acumulado.</div></div><span class="badge high">ATACAR</span></div><div class="priority-item"><div class="num">2</div><div><b>Secundária: ${neg[1].position}</b><div class="small muted">${fmt(Math.abs(neg[1].delta),1)} pts abaixo.</div></div><span class="badge medium">MONITORAR</span></div><div class="priority-item"><div class="num">✓</div><div><b>Força: ${pos[0].position}</b><div class="small muted">${fmt(pos[0].delta,1)} pts acima da média.</div></div><span class="badge low">MANTER</span></div></div>`
+ }else{
+  $("#posNote").textContent="Rank do roster na liga (1 = melhor)";
+  const entries=Object.entries(l.posRanks);
+  $("#posCards").innerHTML=entries.map(([p,r])=>`<div class="pos-card"><div class="p">${p}</div><div class="v ${r<=4?"good":r>=9?"bad":"warn"}">#${r}</div><div class="tiny muted">de ${l.user.leagueTeams}</div></div>`).join("")+`<div class="pos-card"><div class="p">OVERALL</div><div class="v good">#${l.rosterOverallRank}</div><div class="tiny muted">roster</div></div>`;
+  $("#posChart").innerHTML=entries.map(([p,r])=>{const strength=(l.user.leagueTeams+1-r)/l.user.leagueTeams*100;return `<div class="bar-row"><div><b>${p}</b> <span class="muted">#${r}</span></div><div class="bar-track"><div class="bar-fill" style="width:${strength}%"></div></div><div>${fmt(strength,0)}</div></div>`}).join("")+`<div class="legend"><span><i class="dot" style="background:var(--chart1)"></i>Força relativa (rank 1 = 100)</span></div>`;
+  const weak=entries.sort((a,b)=>b[1]-a[1]).slice(0,3), strong=entries.sort((a,b)=>a[1]-b[1]).slice(0,2);
+  $("#posAdvice").innerHTML=`<div class="priority-list"><div class="priority-item"><div class="num">1</div><div><b>Stream/waiver em ${weak[0][0]}</b><div class="small muted">Rank ${weak[0][1]}/${l.user.leagueTeams}; maior oportunidade de upgrade barato.</div></div><span class="badge high">ATACAR</span></div><div class="priority-item"><div class="num">2</div><div><b>Revisar ${weak[1][0]}</b><div class="small muted">Rank ${weak[1][1]}/${l.user.leagueTeams}.</div></div><span class="badge medium">AJUSTAR</span></div><div class="priority-item"><div class="num">✓</div><div><b>Preservar núcleo de ${strong[0][0]}</b><div class="small muted">Rank ${strong[0][1]}/${l.user.leagueTeams}; não enfraquecer para corrigir posição menor.</div></div><span class="badge low">FORÇA</span></div></div>`
+ }
+}
+function renderSources(){
+ $("#sourceRows").innerHTML=DATA.leagues.map(l=>`<div class="source"><div><span class="badge ${l.loaded?"low":"pending"}">${l.loaded?"CARREGADA":"PENDENTE"}</span></div><div><b>${l.platform} • ${l.team}</b><div class="small muted">${l.source}</div><div class="tiny muted">${l.freshness}</div></div><div class="small">${l.name}</div></div>`).join("")
+}
+function csvDownload(name, rows){
+ const csv=rows.map(r=>r.map(v=>`"${String(v??"").replaceAll('"','""')}"`).join(";")).join("\n");
+ const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),500)
+}
+function exportRoster(){const rows=rosterRowsData();csvDownload("roster_filtrado.csv",[["Liga","Jogador","Pos","NFL","Status","PPG3","ProjW4","RankESPN"],...rows.map(r=>[r.league,r.player,r.pos,r.nfl,r.status,r.ppg,r.proj,r.rank])])}
+function exportStandings(){let l=getLeague();if(!l||!l.loaded){csvDownload("resumo_ligas.csv",[["Liga","Time","W","L","PF","PPG","PF Rank"],...loaded.map(x=>[x.name,x.team,x.user.wins,x.user.losses,x.user.pf,x.user.ppg,x.user.pfRank])]);return}const arr=standingsFor(l);csvDownload(`standings_${l.id}.csv`,[["Time","W","L","PF","PPG","WinPct"],...arr.map(x=>[x.team,x.wins,x.losses,x.pf,x.ppg,x.winPct])])}
+init();
+</script>
+</body>
+</html>

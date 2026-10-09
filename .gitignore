@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.pem
+*.p12
+local.properties
+.gradle/
+build/
+__pycache__/
+*.pyc

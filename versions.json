@@ -1,0 +1,722 @@
+[
+  {
+    "name": "Fantasy_Command_Center_2026_v2.html",
+    "created_at": "2026-09-30T18:51:46.262956Z",
+    "size_bytes": 49358,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v2.html",
+    "sha256": "06c94e713cf81ca625ee4378375c80a30e886031b5a766c5a5f2a8b0b5a26f8a",
+    "git_blob_sha": "656fd3d25d6dd3f4efc121ee0daaba60237a4a28",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v3.html",
+    "created_at": "2026-09-30T19:13:24.498794Z",
+    "size_bytes": 104200,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v3.html",
+    "sha256": "df22606925ee72848078d986f387e04f0262dd4ea93021f3b1dbbd86d1deda5b",
+    "git_blob_sha": "fbf3b79500bfc9b2c8c13da1e6d81ad1cc06d78c",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v4.html",
+    "created_at": "2026-09-30T19:48:27.543196Z",
+    "size_bytes": 125955,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v4.html",
+    "sha256": "fdc914caf4032a8b32f97e668fddebe75a12f3f3a275a21d1fb803de82d13769",
+    "git_blob_sha": "7273a512f786da93cdc7084131a3f4374d969654",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_TESTE.html",
+    "created_at": "2026-09-30T21:32:42.463580Z",
+    "size_bytes": 341956,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_TESTE.html",
+    "sha256": "76eb6835b1b35cd246f9d66a72bed9a102bc4b5c6fcb5ad885abab6a954748d0",
+    "git_blob_sha": "f52108df3b4f9ea30465845e714d3948e3b55c83",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_1_TESTE.html",
+    "created_at": "2026-09-30T22:11:47.396461Z",
+    "size_bytes": 683498,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_1_TESTE.html",
+    "sha256": "1f08242e4a8dabd0faae21d4593cae661813bb76817797312541c3004215a95c",
+    "git_blob_sha": "79726ed51e2ac860452d3fc6ebb4279e3770506c",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_2_TESTE.html",
+    "created_at": "2026-09-30T22:37:34.206711Z",
+    "size_bytes": 685681,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_2_TESTE.html",
+    "sha256": "d79d6a22995446ce048199a0c7c51ca8c457c2730f69c22503fbfc751d49e621",
+    "git_blob_sha": "c98e1a1dfd1f975379c625fb48097501e23b5362",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_3_TESTE.html",
+    "created_at": "2026-09-30T23:00:17.226633Z",
+    "size_bytes": 695076,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_3_TESTE.html",
+    "sha256": "9050acd20ef1fb49e0ebbbb8417d76162f706b2325c376eb162cf17ea5e45045",
+    "git_blob_sha": "e8597ec0489e2939c924777c1c7ab5da183bd65a",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_4_TESTE.html",
+    "created_at": "2026-09-30T23:44:55.759331Z",
+    "size_bytes": 782684,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_4_TESTE.html",
+    "sha256": "7d481321af8a9f9ac853425a83e34b390358cb511211375a2cf02fa8452c0205",
+    "git_blob_sha": "3670c38ec4aebcc149bbab497f44b862f8f7044d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_5_TESTE.html",
+    "created_at": "2026-09-30T23:55:48.810551Z",
+    "size_bytes": 1140136,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_5_TESTE.html",
+    "sha256": "99b29d95df08f352951666fbf25788caaf686b70626999c2752d66292bc34a5b",
+    "git_blob_sha": "5f05e480b1b6223c6bbccefd9d1c463b30c4c51f",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_5.zip",
+    "created_at": "2026-10-01T01:46:17.019279Z",
+    "size_bytes": 101689,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_5.zip",
+    "sha256": "a51afd872afb88d561e3132489be5cd0477ee4dc41aac04a7639d9477e4af03c",
+    "git_blob_sha": "788e570211c3f83f9a6f135486d4e181e49bc83f",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_6.zip",
+    "created_at": "2026-10-01T02:02:04.172872Z",
+    "size_bytes": 119973,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_6.zip",
+    "sha256": "b4ccdc6730e3c19b0a309b8a5f1040d523f35510ab2239a04b1155dfd9125899",
+    "git_blob_sha": "87aec29b78d3fd8667568ae6465edf436fb28171",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_6_ANDROID.html",
+    "created_at": "2026-10-01T02:02:07.346095Z",
+    "size_bytes": 1174728,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_6_ANDROID.html",
+    "sha256": "30e111750e7d38c8c7696fb75e4ac23283742d7feb2d99ad2f052f9aab1e6ddf",
+    "git_blob_sha": "c6d000fbcfcefa1bc6e3edae4f2d4d652269fe1d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_6_JAVA_FIX.zip",
+    "created_at": "2026-10-01T03:05:22.063385Z",
+    "size_bytes": 121262,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_6_JAVA_FIX.zip",
+    "sha256": "48ace3cd01f46247544a0c836cb42fd9d72566cea00ecf483b9bbe838dc7bbe9",
+    "git_blob_sha": "68dcc4ccc2d4c54a6d8651496f1f613c1d2af121",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_6_SDK_FIX.zip",
+    "created_at": "2026-10-01T03:15:05.941726Z",
+    "size_bytes": 122334,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_6_SDK_FIX.zip",
+    "sha256": "7260d900598e9e40679b234f69855d81852975d2c2258a3622913c3bd9644431",
+    "git_blob_sha": "90e218f22f724909606011f18da1210464d4b058",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_6_ROBUSTO.zip",
+    "created_at": "2026-10-01T03:20:15.287085Z",
+    "size_bytes": 123097,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_6_ROBUSTO.zip",
+    "sha256": "39a0aca5871a8bf88538b08f68ea7311691e08af42ae83c31e9f1b201bcd96c2",
+    "git_blob_sha": "abb6bfe08511abcaeee62fb2600a0d1c1e4cc48b",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_6_ANDROID_STUDIO_LIMPO.zip",
+    "created_at": "2026-10-01T03:29:04.432353Z",
+    "size_bytes": 113020,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_6_ANDROID_STUDIO_LIMPO.zip",
+    "sha256": "f8a7cb646565b423535198f6e5b4f342c1f52c02941dbf8d067abda9e7f096aa",
+    "git_blob_sha": "00fe329f568028a0334994e967a0ecd19c91ec2d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_7_MOBILE_UPDATE.zip",
+    "created_at": "2026-10-01T04:57:38.971432Z",
+    "size_bytes": 211197,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_7_MOBILE_UPDATE.zip",
+    "sha256": "a2bc1090483d0e74e8267481a4527edc5193193cb2329487c30d3ded0a86f1e0",
+    "git_blob_sha": "577e2d4e44c82341c69895d1a523b4b5bc13f473",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_7_UPDATE.zip",
+    "created_at": "2026-10-01T05:04:47.737529Z",
+    "size_bytes": 590416,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_7_UPDATE.zip",
+    "sha256": "3086590209567fd06ee31eed10ed82c7260e2fdc49d56468ed0783c234961af9",
+    "git_blob_sha": "a1bc04b6b07310af5d04a00ea5949e55fcfa974c",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_8_UPDATE.zip",
+    "created_at": "2026-10-03T18:38:01.959397Z",
+    "size_bytes": 596655,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_8_UPDATE.zip",
+    "sha256": "4d0893707720d74630a190b72441bcce507a6481c2ba1ee4a5a32b33da81037f",
+    "git_blob_sha": "30655e6425091b6ae4edf1dac513c0696fec53cd",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_8_ANDROID.html",
+    "created_at": "2026-10-03T18:38:04.608336Z",
+    "size_bytes": 1199566,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_8_ANDROID.html",
+    "sha256": "2396d48a6ed37f8a9ac793c4d571507425ee5a4e2c795136b665fd11e7805e9b",
+    "git_blob_sha": "c7e23c3aabea543f05301e32e29e75fb586588e5",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_8_1_UPDATE.zip",
+    "created_at": "2026-10-03T21:17:36.104505Z",
+    "size_bytes": 598540,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_8_1_UPDATE.zip",
+    "sha256": "425139b9a6330c831b72627108140a77f2bc421f006339667e0f0e04842de29a",
+    "git_blob_sha": "2355b506f944d794781a01974bd1f61ca1e41dca",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_8_2_UPDATE.zip",
+    "created_at": "2026-10-03T21:23:49.392222Z",
+    "size_bytes": 599275,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_8_2_UPDATE.zip",
+    "sha256": "f9104f5323ddce7a2a86ed5e45da957a4316a584b31bf8b03db7bab18d57ed1f",
+    "git_blob_sha": "461d9d7eb39a6b9bd4e6f203357a6cfa4b27dac6",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_8_2_ANDROID.html",
+    "created_at": "2026-10-03T21:23:51.687779Z",
+    "size_bytes": 1202620,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_8_2_ANDROID.html",
+    "sha256": "a6f12c1e4f83c22b2a7fb0fab3eda21df90087a2ccc92baca37392c643a365ea",
+    "git_blob_sha": "db9a18729072327b07848cd65e00e998469631e0",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_Android_v5_9_UPDATE.zip",
+    "created_at": "2026-10-03T21:59:15.169267Z",
+    "size_bytes": 610771,
+    "path": "archive/packages/Fantasy_Command_Center_Android_v5_9_UPDATE.zip",
+    "sha256": "1af0eb2c563bdafb6a0aebdd4a7ea8efc03377b60c8d8c203a28db053f26b9e9",
+    "git_blob_sha": "59fee7913de948953c4b1838c0325badc6a56498",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v5_9_ANDROID.html",
+    "created_at": "2026-10-03T21:59:17.476152Z",
+    "size_bytes": 1231320,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v5_9_ANDROID.html",
+    "sha256": "19d9fa386fea316b32283fc1e4591a1ea90d8a29d28e2635ce844227dd9769cc",
+    "git_blob_sha": "37b05b450b3eb7573099eafe4c4d00d4fe3b957b",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_IMPLEMENTACAO.zip",
+    "created_at": "2026-10-03T22:21:35.148261Z",
+    "size_bytes": 128226,
+    "path": "archive/packages/Fantasy_Command_Center_2026_v6_0_IMPLEMENTACAO.zip",
+    "sha256": "85becf6287ce82dfdea33cecb3ed8b27f9c142842b1a543da9569d79a2df2f87",
+    "git_blob_sha": "a25b7ae63b5b00925e8af6ed7d761a0551fe091e",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_ANDROID.html",
+    "created_at": "2026-10-03T22:21:37.448139Z",
+    "size_bytes": 1233197,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_ANDROID.html",
+    "sha256": "b8bf618bc792507dc34a3396ca0ff365e7d8e5a1f66c8f9567b72b9514faaf1b",
+    "git_blob_sha": "2a461aa7e8e7d6510d59de4bf82c38e628340cb6",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_1_ANDROID_STUDIO_COMPLETO.zip",
+    "created_at": "2026-10-03T22:41:51.354434Z",
+    "size_bytes": 157065,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_1_ANDROID_STUDIO_COMPLETO.zip",
+    "sha256": "331356c84821b34b83869f3754382bf757ffc4cb7e9e855bbdf0a30600f0f84f",
+    "git_blob_sha": "299465a06a7fc07b392ee5856112be9b8ac3ddb5",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_1_ANDROID_FINAL.html",
+    "created_at": "2026-10-03T22:41:53.741735Z",
+    "size_bytes": 1233245,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_1_ANDROID_FINAL.html",
+    "sha256": "4ec7ba13059c8b4c8890ab3f044de24860fb8992c95003b27cc5d7ea1276d1bf",
+    "git_blob_sha": "7c83fa1185dd69d8ccace9910c2ca511e884a79d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_2_ANDROID_STUDIO_COMPLETO.zip",
+    "created_at": "2026-10-03T23:13:33.889447Z",
+    "size_bytes": 218213,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_2_ANDROID_STUDIO_COMPLETO.zip",
+    "sha256": "e7d1691d50f91445578cc63a7496019d4c67091209265d41ec791efbe51c86c8",
+    "git_blob_sha": "b74690cc9a2fc080ffc2b40d8a4e998fc47ced34",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_2_ANDROID_FINAL.html",
+    "created_at": "2026-10-03T23:13:36.253624Z",
+    "size_bytes": 1237907,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_2_ANDROID_FINAL.html",
+    "sha256": "11176eba592bfd3d41392e79ed83f7216581df13605b23ef0ebf181aac64468f",
+    "git_blob_sha": "224733c461d234f39427af3cbd540ce7e8a3eb27",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_3_PATCH.zip",
+    "created_at": "2026-10-03T23:43:04.474327Z",
+    "size_bytes": 131972,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_3_PATCH.zip",
+    "sha256": "8b09a8a11af123291ff4852ae5d9a68e45c3f8e379f8084093c4040b7f4695c5",
+    "git_blob_sha": "1198f62b12519fc0a164ba0f491996c7ab7228ab",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_3_ANDROID_FINAL.html",
+    "created_at": "2026-10-03T23:43:07.122547Z",
+    "size_bytes": 1240831,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_3_ANDROID_FINAL.html",
+    "sha256": "6b1958407e6fd779c0d8899d828f9c45f826f0a451c75b3ad476549c8431222e",
+    "git_blob_sha": "8cb3d118f2015accd97d57c8aaaac5f91789e3fb",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_4_PATCH.zip",
+    "created_at": "2026-10-04T00:38:34.876270Z",
+    "size_bytes": 138081,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_4_PATCH.zip",
+    "sha256": "81a20a4811eaae2f787f1843e6334a12decfc7c4fdfdc64c37d9e86017b61f3c",
+    "git_blob_sha": "4dfc534ea8e9497770cc20f980000a62aa757144",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_4_PATCH(1).zip",
+    "created_at": "2026-10-04T00:38:34.884505Z",
+    "size_bytes": 142888,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_4_PATCH(1).zip",
+    "sha256": "71dfc60636baa3353da59d96f403bcc49f3582a6fe7465966e9d3b29e67ac102",
+    "git_blob_sha": "7e2de56884ec652147a23ec91886a228b2a1c1de",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_4_ANDROID_FINAL.html",
+    "created_at": "2026-10-04T00:38:37.321201Z",
+    "size_bytes": 1246953,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_4_ANDROID_FINAL.html",
+    "sha256": "a54725fed43018bf74ece9fa72137e1dc92b686a8474bb1ee966964bae8adf0f",
+    "git_blob_sha": "0facc392fbae55f784b8682e4008438f4a22bfbe",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_4_ANDROID_FINAL(1).html",
+    "created_at": "2026-10-04T00:38:37.716684Z",
+    "size_bytes": 1244614,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_4_ANDROID_FINAL(1).html",
+    "sha256": "5cf97309b8d16529108a6d8e8b0436a79c5c5d4a1b366b5a10856e6fa6b18463",
+    "git_blob_sha": "f6b60eab2e69940b385f3a1a21581e128c13d1f4",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_4_ANDROID_FINAL(2).html",
+    "created_at": "2026-10-04T00:38:47.991029Z",
+    "size_bytes": 1246953,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_4_ANDROID_FINAL(2).html",
+    "sha256": "a54725fed43018bf74ece9fa72137e1dc92b686a8474bb1ee966964bae8adf0f",
+    "git_blob_sha": "0facc392fbae55f784b8682e4008438f4a22bfbe",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_5_PATCH.zip",
+    "created_at": "2026-10-04T01:30:39.308711Z",
+    "size_bytes": 139141,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_5_PATCH.zip",
+    "sha256": "864a1af506c87c04e8aa0446f28ca8da3f17b97d1606cbc5d7456b8824d09e83",
+    "git_blob_sha": "3a049793885102522c2e6e76bb7139b6d9f6b91b",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_5_ANDROID_FINAL.html",
+    "created_at": "2026-10-04T01:30:41.950932Z",
+    "size_bytes": 1260200,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_5_ANDROID_FINAL.html",
+    "sha256": "f700f0f4eec5155e8218c85ed1fdb10e6c90499ef8344f84e1c1dc91032a6821",
+    "git_blob_sha": "8e56036c2332924639a5b28f443d30afca143e74",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_6_PATCH.zip",
+    "created_at": "2026-10-04T01:57:18.668153Z",
+    "size_bytes": 140146,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_6_PATCH.zip",
+    "sha256": "afcdc8c9bc4f037b934319c790a5d2ce173185c658eef24f5167eddb6dd23f0c",
+    "git_blob_sha": "40bbeeb832ebba93bcc6a1945f57877410981d9d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_6_ANDROID_FINAL.html",
+    "created_at": "2026-10-04T01:57:21.198798Z",
+    "size_bytes": 1264044,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_6_ANDROID_FINAL.html",
+    "sha256": "a557b1b11f6f3778614600b83583e37542f63ecc80cfc1f04cd600b00560aad9",
+    "git_blob_sha": "c97605d6162b4107de5d00cba119e5ec04d2c801",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_0_7_PATCH.zip",
+    "created_at": "2026-10-04T02:05:38.980373Z",
+    "size_bytes": 125167,
+    "path": "archive/packages/FantasyCommandCenter_v6_0_7_PATCH.zip",
+    "sha256": "0c208259701a3ebe7041c3628d96a83836005604ec2bb0effdce1f97e7e21718",
+    "git_blob_sha": "b31756e4edcea5ac919e093f17d23b8f78c4c2b5",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_0_7_ANDROID_FINAL.html",
+    "created_at": "2026-10-04T02:05:41.241821Z",
+    "size_bytes": 1264391,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_0_7_ANDROID_FINAL.html",
+    "sha256": "e55dc45a961087a5c03fe4d27b0bd14a18ba2cc96ce978fb716fd341cfa89620",
+    "git_blob_sha": "1844cc4ca981ba0b18a7978b899fb238d2db6c74",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_HOME_PREVIEW.html",
+    "created_at": "2026-10-04T03:22:03.868896Z",
+    "size_bytes": 1270553,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_HOME_PREVIEW.html",
+    "sha256": "a0730b3a6a93c74a84153f43401ad4a02758b02b7537437011e44b3bb7711dab",
+    "git_blob_sha": "b84153b875d3c2f290aaaa4992cf63b1afa7a10d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_2.html",
+    "created_at": "2026-10-04T03:48:41.164555Z",
+    "size_bytes": 1274093,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_2.html",
+    "sha256": "5e5b0cdd2d7e0f790a546cfe075e57ac91cabf3402027dff29d8522d0949e5ca",
+    "git_blob_sha": "ab41ef01c3d9e4dea08cfb7c8ed28cf079b99e55",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_3.html",
+    "created_at": "2026-10-04T04:04:42.416720Z",
+    "size_bytes": 1278934,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_3.html",
+    "sha256": "025ca2ea6b5e4e5d79368389012bb4a47aa98e0545bc142143e77fbe7e805a1d",
+    "git_blob_sha": "2cbfc85aa846ebac5de76018576cd8fddf00351c",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_4.html",
+    "created_at": "2026-10-04T04:17:32.672078Z",
+    "size_bytes": 1297749,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_4.html",
+    "sha256": "89ecc2cf89ab87181be962d5d45da66808d4d5c9c4369b6003dddb4e1232857b",
+    "git_blob_sha": "a09751fa1c266f568dcc296949d69d6a07c8b0e6",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_5_AMOLED.html",
+    "created_at": "2026-10-04T04:30:11.117488Z",
+    "size_bytes": 1311973,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_UI_PREVIEW_5_AMOLED.html",
+    "sha256": "08fadd6b68d1b35e9d381d816f71bff8e17ab44edbad841e86421da8d32937b3",
+    "git_blob_sha": "46d620b8cebac5e94e035e2916ce2ecf63f230b0",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_1_PATCH.zip",
+    "created_at": "2026-10-04T04:42:39.973864Z",
+    "size_bytes": 311627,
+    "path": "archive/packages/FantasyCommandCenter_v6_1_PATCH.zip",
+    "sha256": "9e552ce38f3f8dd4d5c7baed3e313e140b7ea31ad0017844dc571e8e61f59d2d",
+    "git_blob_sha": "d920e52fab7356cbeff7b1cf7ad4636891352e88",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_ANDROID_FINAL.html",
+    "created_at": "2026-10-04T04:42:42.155205Z",
+    "size_bytes": 1413633,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_ANDROID_FINAL.html",
+    "sha256": "0fbc4e22dac4206894832ca2767fa2dc985053ee7fb62c9796a37955a9f443a0",
+    "git_blob_sha": "c01dbb82846047af68893c4aa2d70dcac274339d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_1_1_THEME_FIX_PATCH.zip",
+    "created_at": "2026-10-04T04:52:37.896985Z",
+    "size_bytes": 222644,
+    "path": "archive/packages/FantasyCommandCenter_v6_1_1_THEME_FIX_PATCH.zip",
+    "sha256": "8f1ebf9b8969676949b1fedb4aab39dc8a8a39e9b9454b4b47b7a6557e0882d9",
+    "git_blob_sha": "9e9ac66199edeb439bfcb83e3b3e50d912f5b5f3",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_1_ANDROID_FINAL.html",
+    "created_at": "2026-10-04T04:52:40.141727Z",
+    "size_bytes": 1413771,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_1_ANDROID_FINAL.html",
+    "sha256": "0e457cf4e3dcc251685424d77e02d51f51b6d34228e00f5c6004e61a8b35ba26",
+    "git_blob_sha": "0b4396c5f0c38ad4e3fbb7b76941792097a72441",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FantasyCommandCenter_v6_1_2_THEME_ICONS_PATCH.zip",
+    "created_at": "2026-10-04T04:57:31.482459Z",
+    "size_bytes": 222814,
+    "path": "archive/packages/FantasyCommandCenter_v6_1_2_THEME_ICONS_PATCH.zip",
+    "sha256": "7d5947e5d454afe0d69c9457c86392907b283cfeb81ae72561d54d872fbd4810",
+    "git_blob_sha": "4433f95334f394bd6929a660eeafd381fb78a79e",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v6_1_2_ANDROID_FINAL.html",
+    "created_at": "2026-10-04T04:57:34.005481Z",
+    "size_bytes": 1413835,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v6_1_2_ANDROID_FINAL.html",
+    "sha256": "992b2d93ed7b27cb6e267e395c1a457543aa388299aaf2711f89f92c2776fafb",
+    "git_blob_sha": "89a429b300fe2b4f8654570da5355cb08f1ada70",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_0_UPDATE_PACKAGE.zip",
+    "created_at": "2026-10-04T23:04:21.175175Z",
+    "size_bytes": 170859,
+    "path": "archive/packages/FCC_v7_0_UPDATE_PACKAGE.zip",
+    "sha256": "c0b0a875fb9995e869aa3da312c1e990aab565180b1cf2e2799fcaab2bbede08",
+    "git_blob_sha": "26a9033e97416257e44b8928e9efc2b486974db0",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v7_0_ANDROID.html",
+    "created_at": "2026-10-04T23:04:23.355569Z",
+    "size_bytes": 1318841,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v7_0_ANDROID.html",
+    "sha256": "7e31e0cf84cfff6d42458309086874be185aba6fc176115e0b402d93653459eb",
+    "git_blob_sha": "0b269c62973b985685c9b73ffdd285ee03336c97",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_Backend_v0_1.zip",
+    "created_at": "2026-10-04T23:49:31.815940Z",
+    "size_bytes": 345759,
+    "path": "archive/packages/FCC_Backend_v0_1.zip",
+    "sha256": "d14bf5e76f95582e50b5bf6070324aafd26c3dc8ea90e32013164911515c8a5e",
+    "git_blob_sha": "e055605ed89f36c6b85bad5c93eccc326fd79ccf",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v7_0_BACKEND_PREP.html",
+    "created_at": "2026-10-04T23:49:36.094795Z",
+    "size_bytes": 1320313,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v7_0_BACKEND_PREP.html",
+    "sha256": "49b21b77a54033a394dc45a9a51efae67f078cd2cd34a48cb0e892d7b7b11b65",
+    "git_blob_sha": "f69bc255dd72c09f5642b42f0c1f039ba90b0326",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_Android_v7_0_API_SHADOW_STARTER.zip",
+    "created_at": "2026-10-05T18:49:14.238535Z",
+    "size_bytes": 309700,
+    "path": "archive/packages/FCC_Android_v7_0_API_SHADOW_STARTER.zip",
+    "sha256": "1e30a30c448e54b8064fd63a696eb4110f7e8ea7534e813490f6ee11b7e3e05e",
+    "git_blob_sha": "77eda5b956dd945a0fdf629b8db8148c07acd850",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v7_0_API_SHADOW.html",
+    "created_at": "2026-10-05T18:49:16.689010Z",
+    "size_bytes": 1323360,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v7_0_API_SHADOW.html",
+    "sha256": "fad0ec2c6c55c6e3a26fc5530ffe085e3b2622f965b23ddd3d5827fed185477d",
+    "git_blob_sha": "b1e3d0926f90ea497cc98e70d3643d09421563cb",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_0_API_OVERLAY.zip",
+    "created_at": "2026-10-05T20:00:00.480539Z",
+    "size_bytes": 152899,
+    "path": "archive/packages/FCC_v7_0_API_OVERLAY.zip",
+    "sha256": "52ca3284a9f4f916cfadee71698b76c18a78ee44682046b9409ff70d6529fb07",
+    "git_blob_sha": "b5aab88a09c3b04361b8c1f5aeb9527a67d98ed4",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v7_0_API_OVERLAY.html",
+    "created_at": "2026-10-05T20:00:02.850814Z",
+    "size_bytes": 1324991,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v7_0_API_OVERLAY.html",
+    "sha256": "41b74f8d5ce651733360d836ae27a86ce1eee707df9ef542e73d1d633ffc7ca4",
+    "git_blob_sha": "3c7e9eaafbdf2874364371a4aab8a2659a89749d",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_1_LIVE_DYNAMIC.zip",
+    "created_at": "2026-10-05T22:48:00.170613Z",
+    "size_bytes": 158219,
+    "path": "archive/packages/FCC_v7_1_LIVE_DYNAMIC.zip",
+    "sha256": "f4fd6488950a416aad95cf14d2431814d2267c61c3dc08edcd68c2f7b211f0e6",
+    "git_blob_sha": "9105ac9b91e17502516d3b70372d196541b9bb0b",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "Fantasy_Command_Center_2026_v7_1_LIVE_DYNAMIC.html",
+    "created_at": "2026-10-05T22:48:02.550326Z",
+    "size_bytes": 1330399,
+    "path": "archive/previews/Fantasy_Command_Center_2026_v7_1_LIVE_DYNAMIC.html",
+    "sha256": "1f9f30fb1957498a51c4dc7f24aa3018bfe4ec9a78c9037f4cec6f7daacd17e0",
+    "git_blob_sha": "9a8896482114913a2ceea94d38c189e0907bae86",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_LIVE_API_READY.zip",
+    "created_at": "2026-10-06T01:27:55.519548Z",
+    "size_bytes": 172124,
+    "path": "archive/packages/FCC_v7_2_LIVE_API_READY.zip",
+    "sha256": "d0a4bd4b5c86b3470c7e54dcbd742417870e8e3a4761503013448f010c6a5538",
+    "git_blob_sha": "46a58e2aad25ee56b2346cc6d99587e911f17d09",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_1_LIVE_API_READY.zip",
+    "created_at": "2026-10-06T03:23:49.868785Z",
+    "size_bytes": 188986,
+    "path": "archive/packages/FCC_v7_2_1_LIVE_API_READY.zip",
+    "sha256": "60d0e5d111c6e6031849223f02eb4c821f25a15781558a293c6d29c3ebdde6ce",
+    "git_blob_sha": "a92ad225ace18d986152d28c201adbf6db4b388c",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_2_LIVE_API_READY.zip",
+    "created_at": "2026-10-06T03:37:00.964786Z",
+    "size_bytes": 192127,
+    "path": "archive/packages/FCC_v7_2_2_LIVE_API_READY.zip",
+    "sha256": "4b493c1f4fe4197343a56a074acb79b8eb9571b8958d4e9663a1439827376504",
+    "git_blob_sha": "3e058e5e25b38e7738768baf16316cfa6b284555",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_3_UI_ICONS_FIX.zip",
+    "created_at": "2026-10-06T04:32:34.908407Z",
+    "size_bytes": 652073,
+    "path": "archive/packages/FCC_v7_2_3_UI_ICONS_FIX.zip",
+    "sha256": "fb881a3a5823e1a02c8903efdbb19144ebcf204210e78373cce2a0e74248a94d",
+    "git_blob_sha": "531daf8bab0e2ee65dde48bd39f7b03618718fa7",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_4_COMPLETE_FIX.zip",
+    "created_at": "2026-10-06T05:32:16.332219Z",
+    "size_bytes": 896391,
+    "path": "archive/packages/FCC_v7_2_4_COMPLETE_FIX.zip",
+    "sha256": "1aa8da3357d04ea3c51dfd0e1b5a149b53bfea55f4c48c1ce797b156f4be1f3d",
+    "git_blob_sha": "40e52767f0cc14fdb9dbe0681798eb2621176e22",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_5_LIVE_STATUS_FIX.zip",
+    "created_at": "2026-10-06T05:52:08.424953Z",
+    "size_bytes": 898645,
+    "path": "archive/packages/FCC_v7_2_5_LIVE_STATUS_FIX.zip",
+    "sha256": "3296bba369866839699556bb1ba386bcc4499126be5a93a0bcec98a3afacbb2d",
+    "git_blob_sha": "2190b87e8f208e453eeac10048379da92e3fcfe9",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_6_WEEK_ROLLOVER_FIX.zip",
+    "created_at": "2026-10-06T11:29:55.378724Z",
+    "size_bytes": 898809,
+    "path": "archive/packages/FCC_v7_2_6_WEEK_ROLLOVER_FIX.zip",
+    "sha256": "7d8877e7892e0bc2dd10b9bd99207f6ce34e179c8aec955f2abacfc445cf2ac4",
+    "git_blob_sha": "7fff2d6ee57fa6890dd0d33eaec368c51088b9af",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_7_LIVE_SCHEDULE_PLANNER_FIX.zip",
+    "created_at": "2026-10-06T11:58:34.576788Z",
+    "size_bytes": 903391,
+    "path": "archive/packages/FCC_v7_2_7_LIVE_SCHEDULE_PLANNER_FIX.zip",
+    "sha256": "e441375dbe9654492d048cb1299bf98050cfbc3715d1d1c54c43f70c5745c845",
+    "git_blob_sha": "f998e06d9a26f986eba3618bf38685d2be74ddbc",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_8_AUTO_WEEK_ENGINE.zip",
+    "created_at": "2026-10-06T12:18:50.027670Z",
+    "size_bytes": 896797,
+    "path": "archive/packages/FCC_v7_2_8_AUTO_WEEK_ENGINE.zip",
+    "sha256": "6482fe4baab7055a7ac7d6a11d430bb77bf2b23a7725ef8d60d63ae32b7b6b40",
+    "git_blob_sha": "3fa3c30a424b0a25f373addda19ac6531ad57c0b",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_9_WAIVER_PAIRING_WEEK_FIX.zip",
+    "created_at": "2026-10-06T15:20:29.045477Z",
+    "size_bytes": 908995,
+    "path": "archive/packages/FCC_v7_2_9_WAIVER_PAIRING_WEEK_FIX.zip",
+    "sha256": "19d3c79e41a87e59fcc8a94a4caf9fe71ef602119d67aad7af6886a54bd555ae",
+    "git_blob_sha": "8b9a9e721e4dfff7832859503e465eb2acacab93",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_2_9_WAIVER_PAIRING_WEEK_FIX_R2.zip",
+    "created_at": "2026-10-06T16:40:24.716292Z",
+    "size_bytes": 904684,
+    "path": "archive/packages/FCC_v7_2_9_WAIVER_PAIRING_WEEK_FIX_R2.zip",
+    "sha256": "2d43dd956b6f6d56c56ccf97849dfdd8f9c3c806437c60817bde5d6d3b39272d",
+    "git_blob_sha": "2bfc6578ce789e3bf66ff070cd5f6b360a6100eb",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_3_0_RELIABILITY_DATA_CONSISTENCY.zip",
+    "created_at": "2026-10-06T20:07:31.795091Z",
+    "size_bytes": 904854,
+    "path": "archive/packages/FCC_v7_3_0_RELIABILITY_DATA_CONSISTENCY.zip",
+    "sha256": "7d76cb31b927072237295c8352c6fa6338ee68dce21818e19c16b23f98c57cdf",
+    "git_blob_sha": "1d7a78c26b2063382b8361358cb4e4d95270848a",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_3_1_CLOUD_FIRST_FRESHNESS.zip",
+    "created_at": "2026-10-06T20:41:01.964248Z",
+    "size_bytes": 910483,
+    "path": "archive/packages/FCC_v7_3_1_CLOUD_FIRST_FRESHNESS.zip",
+    "sha256": "587b90f6006a3f6c2402938ac631892a10c877971885226ee86949033e847180",
+    "git_blob_sha": "2a20b761d80404fbd1b1ca37937fea40dd6ad7c8",
+    "status": "historical_not_revalidated"
+  },
+  {
+    "name": "FCC_v7_3_2_UI_NOTIFICATIONS_WEEK_HISTORY_FIX.zip",
+    "created_at": "2026-10-07T23:22:36.060383Z",
+    "size_bytes": 911337,
+    "path": "archive/packages/FCC_v7_3_2_UI_NOTIFICATIONS_WEEK_HISTORY_FIX.zip",
+    "sha256": "789ccf4f8a3ab89125d60bf86e42df319ef7cabaf0177695f5b6cd48a73c9736",
+    "git_blob_sha": "8d2132dd0cb443471d08938f54800ac32df9d48d",
+    "status": "current_reference_requires_validation"
+  },
+  {
+    "name": "FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip",
+    "created_at": "2026-10-08T04:25:59.925353Z",
+    "size_bytes": 912227,
+    "path": "archive/discarded/FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip",
+    "sha256": "904b1e11ad6be831c10cf455f7536a3442e0657f1e99916debc75a94c703a734",
+    "git_blob_sha": "bde8fc9bc27f28ec3f580ced400298b80dd6f703",
+    "status": "discarded_simulated_data"
+  }
+]
