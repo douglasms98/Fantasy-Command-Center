@@ -718,5 +718,22 @@
     "sha256": "904b1e11ad6be831c10cf455f7536a3442e0657f1e99916debc75a94c703a734",
     "git_blob_sha": "bde8fc9bc27f28ec3f580ced400298b80dd6f703",
     "status": "discarded_simulated_data"
+  },
+  {
+    "name": "FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip",
+    "created_at": "2026-10-09T21:03:11.302112Z",
+    "size_bytes": 809856,
+    "path": "archive/candidates/FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip",
+    "sha256": "fdef86dc88af1e80587efd64b1f181edf129bdfbf80e5c3bbf8214597c1cdf3a",
+    "git_blob_sha": "c922fd29c67435a05af57adf454725dd14822209",
+    "status": "release_candidate_android_build_device_pending",
+    "base_version": "7.3.2",
+    "validation": {
+      "javascript_logic": "passed",
+      "xml_parse": "passed",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run"
+    }
   }
 ]

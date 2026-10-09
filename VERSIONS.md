@@ -1,6 +1,6 @@
 # Índice de versões / Version index
 
-80 arquivos recuperados: 44 ZIPs e 36 HTMLs. Nomes originais preservados.
+80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 1 novo ZIP candidato: 81 artefatos. Nomes originais preservados.
 
 v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. As demais versões são históricas e não foram revalidadas neste arquivamento.
 
@@ -86,3 +86,8 @@ v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. A
 | 2026-10-06 | [FCC_v7_3_1_CLOUD_FIRST_FRESHNESS.zip](archive/packages/FCC_v7_3_1_CLOUD_FIRST_FRESHNESS.zip) | historical_not_revalidated |
 | 2026-10-07 | [FCC_v7_3_2_UI_NOTIFICATIONS_WEEK_HISTORY_FIX.zip](archive/packages/FCC_v7_3_2_UI_NOTIFICATIONS_WEEK_HISTORY_FIX.zip) | current_reference_requires_validation |
 | 2026-10-08 | [FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip](archive/discarded/FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip) | discarded_simulated_data |
+| 2026-10-09 | [FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip](archive/candidates/FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip) | release_candidate_android_build_device_pending |
+
+## v7.3.4 RC1
+
+Patch baseado na v7.3.2. [Alterações, instalação e limitações](candidates/v7.3.4-rc1/README_v7_3_4_RC1.md). Testes de lógica JavaScript e parsing XML passaram. Não compilado nem testado no Android; não promove a referência atual. Tradução inicial requer download do modelo em Wi-Fi.

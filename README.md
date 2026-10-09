@@ -12,6 +12,7 @@ An Android application under development to centralize NFL fantasy football leag
 
 Este repositório preserva os pacotes e previews recuperados do projeto. Os nomes originais são mantidos. A presença no histórico não significa que uma versão foi validada.
 
+- **v7.3.4 RC1:** [candidato de correção](candidates/v7.3.4-rc1/README_v7_3_4_RC1.md) para notificações, escalação, planner, tradução e interface. Testes de lógica passaram; build Android e dispositivo pendentes. É um patch, não um APK.
 - **v7.3.2:** referência atual; ainda exige validação das integrações e testes no dispositivo.
 - **v7.3.3 ALLIGATORS_PPR_PREP:** descartada pelo autor por utilizar dados simulados. Arquivada apenas para preservar o histórico. Não instalar nem implantar como versão válida.
 - Demais versões: histórico de desenvolvimento, patches e previews; sem nova validação funcional durante o arquivamento.
@@ -20,6 +21,8 @@ The repository preserves recovered project packages and previews. Original filen
 
 ## Estrutura / Structure
 
+- `archive/candidates/`: candidatos ainda não validados no Android.
+- `candidates/v7.3.4-rc1/`: código, instalador e testes do patch RC1.
 - `archive/packages/`: pacotes Android, backend e patches.
 - `archive/previews/`: previews HTML.
 - `archive/discarded/`: versões explicitamente descartadas.
