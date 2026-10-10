@@ -12,6 +12,7 @@ An Android application under development to centralize NFL fantasy football leag
 
 Este repositório preserva os pacotes e previews recuperados do projeto. Os nomes originais são mantidos. A presença no histórico não significa que uma versão foi validada.
 
+- **v8.0.0 RC2:** [interface dinâmica e limite de 6 ligas por conta](candidates/v8.0.0-rc2/README_v8_0_0_RC2.md). Uma liga cadastrada mostra uma, duas mostram duas, até seis. Inclusão/remoção atualizam cartões e filtros; interface e servidor bloqueiam a sétima. Testes locais passaram; Cloud e Android pendentes.
 - **v8.0.0 RC1:** [contas e ligas por usuário](candidates/v8.0.0-rc1/README_v8_0_0_RC1.md), com cadastro/login Firebase, ligação das ligas ao UID e interface Android/web sem chave manual. Testes locais passaram; ativação Cloud, provedores reais e Android pendentes. É candidato, não APK pronto.
 - **v7.3.4 RC2:** [semanas dinâmicas](candidates/v7.3.4-rc2/README_v7_3_4_RC2.md), com proveniência das projeções e histórico por fonte. Testes de lógica passaram; build Android, dispositivo e API web pendentes.
 - **v7.3.4 RC1:** [candidato de correção](candidates/v7.3.4-rc1/README_v7_3_4_RC1.md) para notificações, escalação, planner, tradução e interface. Testes de lógica passaram; build Android e dispositivo pendentes. É um patch, não um APK.
@@ -24,6 +25,7 @@ The repository preserves recovered project packages and previews. Original filen
 ## Estrutura / Structure
 
 - `archive/candidates/`: candidatos ainda não validados no Android.
+- `candidates/v8.0.0-rc2/`: interface dinâmica, quota de 6 por usuário, patch Android, backend e testes.
 - `candidates/v8.0.0-rc1/`: patch Android, backend de contas, testes e guia Cloud.
 - `candidates/v7.3.4-rc2/`: patch, código e testes com semanas dinâmicas.
 - `candidates/v7.3.4-rc1/`: código, instalador e testes do patch RC1.

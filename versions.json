@@ -779,5 +779,31 @@
       "firebase_firestore_integration": "not_run",
       "cloud_deployment": "not_run"
     }
+  },
+  {
+    "name": "FCC_v8_0_0_RC2_DYNAMIC_LEAGUES_LIMIT_6.zip",
+    "created_at": "2026-10-10T17:38:15.833025Z",
+    "size_bytes": 978481,
+    "sha256": "972a10d84f18a4521fe3460696ea02ddf3dfc50745318cdb856093f49b92be29",
+    "git_blob_sha": "2493f1454d13aee82bf82c852bb25438ac470b7b",
+    "path": "archive/candidates/FCC_v8_0_0_RC2_DYNAMIC_LEAGUES_LIMIT_6.zip",
+    "status": "release_candidate_cloud_setup_provider_android_pending",
+    "base_version": "7.3.2",
+    "inherits": "8.0.0-rc1",
+    "league_limit_per_user": 6,
+    "validation": {
+      "backend_tests": "21 passed (TEST_ONLY fixtures)",
+      "javascript_logic": "passed",
+      "dynamic_week_logic": "passed",
+      "account_dom_tests": "passed (jsdom; dynamic 0→1→2→6, quota, removal, account isolation, concurrent refresh and stale responses)",
+      "source_parse": "passed (12 Python, 12 Java, 7 XML)",
+      "android_web_asset_match": "passed",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run",
+      "real_provider_integration": "not_run",
+      "firebase_firestore_integration": "not_run",
+      "cloud_deployment": "not_run"
+    }
   }
 ]

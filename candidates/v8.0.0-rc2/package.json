@@ -1,0 +1,11 @@
+{
+  "name": "fcc-v8-accounts-review",
+  "version": "8.0.0-rc2",
+  "private": true,
+  "scripts": {
+    "test": "node tests/test_logic.cjs && node tests/test_dynamic_weeks.cjs && node tests/test_accounts_ui.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.2"
+  }
+}
