@@ -12,6 +12,7 @@ An Android application under development to centralize NFL fantasy football leag
 
 Este repositório preserva os pacotes e previews recuperados do projeto. Os nomes originais são mantidos. A presença no histórico não significa que uma versão foi validada.
 
+- **Correção Cloud da RC3:** [scripts para retomar o deploy após HTTP 403](fixes/v8.0.0-rc3-cloud-auth/README_CLOUD_AUTH_FIX.md), com projeto de cota explícito e diagnóstico seguro. Dez testes passaram; execução Cloud real pendente. Preserva o pacote Android da RC3.
 - **v8.0.0 RC3:** [Entrar com Google na web e no Android](candidates/v8.0.0-rc3/README_v8_0_0_RC3.md), com validação Google/Firebase na API e vinculação de contas existentes. Mantém a interface dinâmica e o limite de seis ligas. 35 testes de backend e quatro suítes JavaScript passaram; configuração Google, deploy RC3, login real e Android pendentes. Inclui [guia de ativação](candidates/v8.0.0-rc3/docs/GOOGLE_LOGIN_SETUP_PT_BR.md) e instalador PowerShell. É patch e backend, sem APK.
 - **v8.0.0 RC2:** [interface dinâmica e limite de 6 ligas por conta](candidates/v8.0.0-rc2/README_v8_0_0_RC2.md). Uma liga cadastrada mostra uma, duas mostram duas, até seis. Inclusão/remoção atualizam cartões e filtros; interface e servidor bloqueiam a sétima. Testes locais passaram; Cloud e Android pendentes.
 - **v8.0.0 RC1:** [contas e ligas por usuário](candidates/v8.0.0-rc1/README_v8_0_0_RC1.md), com cadastro/login Firebase, ligação das ligas ao UID e interface Android/web sem chave manual. Testes locais passaram; ativação Cloud, provedores reais e Android pendentes. É candidato, não APK pronto.
@@ -25,6 +26,7 @@ The repository preserves recovered project packages and previews. Original filen
 
 ## Estrutura / Structure
 
+- `fixes/v8.0.0-rc3-cloud-auth/`: correção dos scripts de autenticação no deploy da RC3.
 - `archive/candidates/`: candidatos ainda não validados no Android.
 - `candidates/v8.0.0-rc3/`: login Google web/nativo, backend, instalador, testes e guia de ativação.
 - `candidates/v8.0.0-rc2/`: interface dinâmica, quota de 6 por usuário, patch Android, backend e testes.

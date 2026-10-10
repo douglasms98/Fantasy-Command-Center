@@ -837,5 +837,25 @@
       "firebase_firestore_integration": "not_run",
       "cloud_deployment": "not_run"
     }
+  },
+  {
+    "name": "FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip",
+    "created_at": "2026-10-10T21:04:11.950256Z",
+    "size_bytes": 8508,
+    "sha256": "7cdd11e07139d9934c68ee9020008dd37cf7393935c4c5a4217592f558d622a9",
+    "git_blob_sha": "f03c8006c47060631c6e38f1953a0306fdf84eef",
+    "path": "archive/candidates/FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip",
+    "status": "cloud_auth_script_fix_real_deployment_pending",
+    "inherits": "8.0.0-rc3",
+    "scope": "cloud_deployment_scripts_only",
+    "validation": {
+      "cloud_helper_and_wrapper_tests": "10 passed (TEST_ONLY fixtures; quota-project requirement, domain preservation, safe error diagnostics, original backend path and deployment stopped on auth failure)",
+      "python_parse": "passed",
+      "bash_syntax": "passed",
+      "real_cloud_execution": "not_run",
+      "cloud_deployment": "not_run",
+      "real_google_login": "not_run",
+      "android_changes": "none"
+    }
   }
 ]
