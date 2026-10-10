@@ -735,5 +735,24 @@
       "device": "not_run",
       "visual_render": "not_run"
     }
+  },
+  {
+    "name": "FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip",
+    "created_at": "2026-10-10T14:07:36.662935Z",
+    "size_bytes": 819801,
+    "path": "archive/candidates/FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip",
+    "sha256": "0b9f745494b444b294db36cb562c2fd147367bbbb46bee79ab2378b934f83b56",
+    "git_blob_sha": "f05c118577da696ff1a139aefe2fe1007dab29a9",
+    "status": "release_candidate_android_build_device_pending",
+    "base_version": "7.3.2",
+    "inherits": "7.3.4-rc1",
+    "validation": {
+      "javascript_logic": "passed",
+      "dynamic_week_logic": "passed",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run",
+      "real_provider_integration": "not_run"
+    }
   }
 ]

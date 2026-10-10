@@ -1,6 +1,6 @@
 # Índice de versões / Version index
 
-80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 1 novo ZIP candidato: 81 artefatos. Nomes originais preservados.
+80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 2 novos ZIPs candidatos: 82 artefatos. Nomes originais preservados.
 
 v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. As demais versões são históricas e não foram revalidadas neste arquivamento.
 
@@ -88,6 +88,12 @@ v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. A
 | 2026-10-08 | [FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip](archive/discarded/FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip) | discarded_simulated_data |
 | 2026-10-09 | [FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip](archive/candidates/FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip) | release_candidate_android_build_device_pending |
 
+| 2026-10-10 | [FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip](archive/candidates/FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip) | release_candidate_android_build_device_pending |
+
 ## v7.3.4 RC1
 
 Patch baseado na v7.3.2. [Alterações, instalação e limitações](candidates/v7.3.4-rc1/README_v7_3_4_RC1.md). Testes de lógica JavaScript e parsing XML passaram. Não compilado nem testado no Android; não promove a referência atual. Tradução inicial requer download do modelo em Wi-Fi.
+
+## v7.3.4 RC2
+
+[Detalhes e instalação](candidates/v7.3.4-rc2/README_v7_3_4_RC2.md). Herda RC1; corrige campos e rótulos temporais, confirmação de histórico e proteção contra projeções de rodada antiga. Testes JavaScript de lógica e mudança W4→W6 passaram. Build Android, renderização visual, dispositivo e extração real permanecem pendentes; v7.3.2 segue como referência. Não implementa cliente web da API.
