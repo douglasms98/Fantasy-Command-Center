@@ -1,6 +1,6 @@
 # Índice de versões / Version index
 
-80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 4 novos ZIPs candidatos: 84 artefatos. Nomes originais preservados.
+80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 5 novos ZIPs candidatos: 85 artefatos. Nomes originais preservados.
 
 v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. As demais versões são históricas e não foram revalidadas neste arquivamento.
 
@@ -90,6 +90,7 @@ v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. A
 | 2026-10-10 | [FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip](archive/candidates/FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip) | release_candidate_android_build_device_pending |
 | 2026-10-10 | [FCC_v8_0_0_RC1_USER_ACCOUNTS_CLOUD.zip](archive/candidates/FCC_v8_0_0_RC1_USER_ACCOUNTS_CLOUD.zip) | release_candidate_cloud_setup_provider_android_pending |
 | 2026-10-10 | [FCC_v8_0_0_RC2_DYNAMIC_LEAGUES_LIMIT_6.zip](archive/candidates/FCC_v8_0_0_RC2_DYNAMIC_LEAGUES_LIMIT_6.zip) | release_candidate_cloud_setup_provider_android_pending |
+| 2026-10-10 | [FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip](archive/candidates/FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip) | release_candidate_google_setup_cloud_android_pending |
 
 ## v7.3.4 RC1
 
@@ -107,3 +108,7 @@ Patch baseado na v7.3.2. [Alterações, instalação e limitações](candidates/
 
 [Interface dinâmica e limite de 6 ligas](candidates/v8.0.0-rc2/README_v8_0_0_RC2.md). A quantidade de cartões, filtros e ligas exibidas acompanha os cadastros de cada usuário, de 0 a 6. A sétima liga é rejeitada no servidor, duplicatas não ocupam vagas adicionais e remoção libera uma vaga; ligas pendentes contam no limite. Plataformas sem ligas ficam ocultas. Atualização em andamento e listas atrasadas não impedem a atualização após cadastro. 21 testes Python e testes JavaScript de lógica, semanas e interface (jsdom) passaram com fixtures TEST_ONLY. Fontes Java/Python/XML e HTML Android/web conferidos. Deploy Cloud, Firestore real, provedores e Android permanecem pendentes; v7.3.2 continua como referência.
 
+
+## v8.0.0 RC3
+
+[Entrar com Google, configuração e instalação](candidates/v8.0.0-rc3/README_v8_0_0_RC3.md). Acrescenta o botão oficial à web e Credential Manager ao Android, com validação de assinatura, emissor, audiência, validade e nonce na API. Contas existentes podem vincular Google mantendo o UID e suas ligas. A interface dinâmica e o limite de seis ligas por conta são preservados. 35 testes Python e quatro suítes JavaScript passaram com fixtures TEST_ONLY; fontes Python/Java/XML, sintaxe Bash e igualdade dos HTMLs conferidas. Configuração Google real, deploy da RC3, login real, PowerShell/Gradle, dispositivo e renderização visual permanecem pendentes. Pacote de patch Android e backend, sem APK. A RC2 anterior foi publicada pelo usuário e respondeu a /health e /app com HTTP 200; isso não valida o login Google da RC3. v7.3.2 continua como referência até conferir ESPN/Sleeper reais.

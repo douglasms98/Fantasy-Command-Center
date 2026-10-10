@@ -805,5 +805,37 @@
       "firebase_firestore_integration": "not_run",
       "cloud_deployment": "not_run"
     }
+  },
+  {
+    "name": "FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip",
+    "created_at": "2026-10-10T20:15:34.977663Z",
+    "size_bytes": 1002907,
+    "sha256": "462b62ed8e580811db252662ed6fbda0c28d8f369f039512cd25b4e2e3009b8e",
+    "git_blob_sha": "e94f31c4cd30ef65760f4782c5dddd0d5348adae",
+    "path": "archive/candidates/FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip",
+    "status": "release_candidate_google_setup_cloud_android_pending",
+    "base_version": "7.3.2",
+    "inherits": "8.0.0-rc2",
+    "league_limit_per_user": 6,
+    "validation": {
+      "backend_tests": "35 passed (TEST_ONLY fixtures)",
+      "google_token_crypto": "passed (real verifier with test RSA certificate; signature, issuer, audience, expiry, nonce)",
+      "javascript_logic": "passed",
+      "dynamic_week_logic": "passed",
+      "account_dom_tests": "passed (jsdom TEST_ONLY fixtures)",
+      "google_dom_tests": "passed (web/native flow, nonce, account linking, cancellation, stale callbacks, logout during cookie exchange)",
+      "cloud_setup_helper": "passed (mocked Google config; secrets suppressed; existing domains preserved)",
+      "source_parse": "passed (15 Python, 13 Java, 7 XML)",
+      "android_web_asset_match": "passed",
+      "bash_syntax": "passed",
+      "powershell_execution": "not_run",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run",
+      "real_google_login": "not_run",
+      "real_provider_integration": "not_run",
+      "firebase_firestore_integration": "not_run",
+      "cloud_deployment": "not_run"
+    }
   }
 ]

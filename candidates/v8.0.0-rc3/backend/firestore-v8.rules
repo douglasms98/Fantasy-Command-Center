@@ -1,0 +1,11 @@
+// Merge these deny rules with the existing project's rules.
+// All FCC access goes through the server, which validates Firebase UID.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /fcc_users/{document=**} { allow read, write: if false; }
+    match /fcc_rate_limits/{document=**} { allow read, write: if false; }
+    match /fcc_auth_challenges/{document=**} { allow read, write: if false; }
+    match /fcc_public_cache/{document=**} { allow read, write: if false; }
+  }
+}
