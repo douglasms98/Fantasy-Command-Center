@@ -1,6 +1,6 @@
 # Índice de versões / Version index
 
-80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 2 novos ZIPs candidatos: 82 artefatos. Nomes originais preservados.
+80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 3 novos ZIPs candidatos: 83 artefatos. Nomes originais preservados.
 
 v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. As demais versões são históricas e não foram revalidadas neste arquivamento.
 
@@ -87,8 +87,8 @@ v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. A
 | 2026-10-07 | [FCC_v7_3_2_UI_NOTIFICATIONS_WEEK_HISTORY_FIX.zip](archive/packages/FCC_v7_3_2_UI_NOTIFICATIONS_WEEK_HISTORY_FIX.zip) | current_reference_requires_validation |
 | 2026-10-08 | [FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip](archive/discarded/FCC_v7_3_3_ALLIGATORS_PPR_PREP.zip) | discarded_simulated_data |
 | 2026-10-09 | [FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip](archive/candidates/FCC_v7_3_4_RC1_NOTIFICATIONS_LINEUP_BACKGROUND_UI.zip) | release_candidate_android_build_device_pending |
-
 | 2026-10-10 | [FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip](archive/candidates/FCC_v7_3_4_RC2_DYNAMIC_WEEKS.zip) | release_candidate_android_build_device_pending |
+| 2026-10-10 | [FCC_v8_0_0_RC1_USER_ACCOUNTS_CLOUD.zip](archive/candidates/FCC_v8_0_0_RC1_USER_ACCOUNTS_CLOUD.zip) | release_candidate_cloud_setup_provider_android_pending |
 
 ## v7.3.4 RC1
 
@@ -97,3 +97,8 @@ Patch baseado na v7.3.2. [Alterações, instalação e limitações](candidates/
 ## v7.3.4 RC2
 
 [Detalhes e instalação](candidates/v7.3.4-rc2/README_v7_3_4_RC2.md). Herda RC1; corrige campos e rótulos temporais, confirmação de histórico e proteção contra projeções de rodada antiga. Testes JavaScript de lógica e mudança W4→W6 passaram. Build Android, renderização visual, dispositivo e extração real permanecem pendentes; v7.3.2 segue como referência. Não implementa cliente web da API.
+
+## v8.0.0 RC1
+
+[Contas, ligas por usuário e instalação](candidates/v8.0.0-rc1/README_v8_0_0_RC1.md). Implementa Firebase Auth, cadastro/remoção de ligas por UID, acesso Android/web sem chave manual e cache/notificações separados por conta. 20 testes Python e testes JavaScript de lógica, semanas e interface (jsdom) passaram com fixtures TEST_ONLY; fontes Java/Python/XML e igualdade dos HTMLs conferidos. Firebase/Firestore reais, deploy Cloud, paridade dos dados avançados, build Android, dispositivo e render visual pendentes. v7.3.2 permanece como referência.
+

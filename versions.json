@@ -754,5 +754,30 @@
       "visual_render": "not_run",
       "real_provider_integration": "not_run"
     }
+  },
+  {
+    "name": "FCC_v8_0_0_RC1_USER_ACCOUNTS_CLOUD.zip",
+    "created_at": "2026-10-10T17:11:11.922570Z",
+    "size_bytes": 973216,
+    "path": "archive/candidates/FCC_v8_0_0_RC1_USER_ACCOUNTS_CLOUD.zip",
+    "sha256": "73d9f81715dd3c377cd1472fcee7422463cd113b3505d81c7d38840020528fc7",
+    "git_blob_sha": "079f960d468f015b6cd28058e0a4437e8acfbada",
+    "status": "release_candidate_cloud_setup_provider_android_pending",
+    "base_version": "7.3.2",
+    "inherits": "7.3.4-rc2",
+    "validation": {
+      "backend_tests": "20 passed (TEST_ONLY fixtures)",
+      "javascript_logic": "passed",
+      "dynamic_week_logic": "passed",
+      "account_dom_tests": "passed (jsdom TEST_ONLY fixtures)",
+      "source_parse": "passed (12 Python, 12 Java, 7 XML)",
+      "android_web_asset_match": "passed",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run",
+      "real_provider_integration": "not_run",
+      "firebase_firestore_integration": "not_run",
+      "cloud_deployment": "not_run"
+    }
   }
 ]
