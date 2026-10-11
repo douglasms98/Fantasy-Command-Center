@@ -1,0 +1,223 @@
+{
+  "version": "rc7",
+  "protectedTerms": [
+    "Washington Commanders",
+    "Jacksonville Jaguars",
+    "Los Angeles Chargers",
+    "New England Patriots",
+    "Tampa Bay Buccaneers",
+    "Philadelphia Eagles",
+    "Pittsburgh Steelers",
+    "San Francisco 49ers",
+    "Cincinnati Bengals",
+    "Indianapolis Colts",
+    "Kansas City Chiefs",
+    "New Orleans Saints",
+    "Arizona Cardinals",
+    "Carolina Panthers",
+    "Green Bay Packers",
+    "Las Vegas Raiders",
+    "Minnesota Vikings",
+    "Baltimore Ravens",
+    "Cleveland Browns",
+    "Los Angeles Rams",
+    "Seattle Seahawks",
+    "Tennessee Titans",
+    "Atlanta Falcons",
+    "New York Giants",
+    "Dallas Cowboys",
+    "Denver Broncos",
+    "Houston Texans",
+    "Miami Dolphins",
+    "Buffalo Bills",
+    "Chicago Bears",
+    "Detroit Lions",
+    "New York Jets",
+    "Buccaneers",
+    "Commanders",
+    "Cardinals",
+    "Chargers",
+    "Dolphins",
+    "Panthers",
+    "Patriots",
+    "Seahawks",
+    "Steelers",
+    "Bengals",
+    "Broncos",
+    "Cowboys",
+    "Falcons",
+    "Jaguars",
+    "Packers",
+    "Raiders",
+    "Vikings",
+    "Browns",
+    "Chiefs",
+    "Eagles",
+    "Giants",
+    "Ravens",
+    "Saints",
+    "Texans",
+    "Titans",
+    "49ers",
+    "Bears",
+    "Bills",
+    "Colts",
+    "Lions",
+    "D/ST",
+    "ESPN",
+    "FAAB",
+    "Jets",
+    "Rams",
+    "BYE",
+    "DNP",
+    "MNF",
+    "NFL",
+    "PPR",
+    "QB1",
+    "RB1",
+    "SNF",
+    "TE1",
+    "TNF",
+    "WR1",
+    "IR",
+    "QB",
+    "RB",
+    "TE",
+    "WR"
+  ],
+  "days": {
+    "Monday": "na segunda-feira",
+    "Tuesday": "na terça-feira",
+    "Wednesday": "na quarta-feira",
+    "Thursday": "na quinta-feira",
+    "Friday": "na sexta-feira",
+    "Saturday": "no sábado",
+    "Sunday": "no domingo"
+  },
+  "body": {
+    "hamstring": "posterior da coxa",
+    "knee": "joelho",
+    "ankle": "tornozelo",
+    "groin": "virilha",
+    "glute": "glúteo",
+    "calf": "panturrilha",
+    "shoulder": "ombro",
+    "foot": "pé",
+    "toe": "dedo do pé",
+    "wrist": "pulso",
+    "back": "costas",
+    "concussion": "concussão"
+  },
+  "patterns": [
+    {
+      "pattern": "^Can (?:the )?(.+?)['’] defense again (?:silence|stop|shut down) (?:the )?(.+?)['’] (?:hot|red-hot) offense (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\\?$",
+      "template": "A defesa dos {1} pode voltar a conter o ataque em boa fase dos {2} {d3}?"
+    },
+    {
+      "pattern": "^Fantasy football buzz: Expect (.+?)['’] (.+?) to (?:retain|keep) (RB1|WR1|TE1|QB1) role with (.+?) out$",
+      "template": "Fantasy Football: {2} deve seguir como {3} dos {1}, com {4} fora."
+    },
+    {
+      "pattern": "^(.+?) DNP due to (hamstring|knee|ankle|groin|glute|calf|shoulder|foot|toe|wrist|back|concussion)(?: issue)?$",
+      "template": "{1} não treinou por problema em {b2}."
+    },
+    {
+      "pattern": "^(.+?) (?:does not|doesn't|did not) practice(?: on)? (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} não treinou {d2}."
+    },
+    {
+      "pattern": "^(.+?) (?:does not|doesn't|did not) practice$",
+      "template": "{1} não treinou."
+    },
+    {
+      "pattern": "^(.+?) officially limited(?: at practice)? (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} teve participação limitada no treino {d2}."
+    },
+    {
+      "pattern": "^(.+?) (?:limited at practice|limited practice)(?: on)? (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} teve participação limitada no treino {d2}."
+    },
+    {
+      "pattern": "^(.+?) (?:is )?expected to play (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} deve jogar {d2}."
+    },
+    {
+      "pattern": "^(.+?) (?:is )?(?:ruled out|out) for (?:Week|week) (\\d+)$",
+      "template": "{1} está fora da Semana {2}."
+    },
+    {
+      "pattern": "^(.+?) (?:is )?(?:ruled out|out) (?:for )?(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} está fora do jogo {d2}."
+    },
+    {
+      "pattern": "^(.+?) (?:is )?(?:officially )?questionable for (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} é dúvida para o jogo {d2}."
+    },
+    {
+      "pattern": "^(.+?) (?:is )?(?:good to go|cleared to play) (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} está liberado para jogar {d2}."
+    },
+    {
+      "pattern": "^(.+?) \\(([^)]+)\\) off injury report (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} ({b2}) deixou o relatório de lesões para o jogo {d3}."
+    },
+    {
+      "pattern": "^(.+?) (?:is )?expected to return (?:Week|week) (\\d+)$",
+      "template": "{1} tem retorno previsto para a Semana {2}."
+    },
+    {
+      "pattern": "^(.+?) (?:was |is )?placed on (?:IR|injured reserve)$",
+      "template": "{1} foi colocado na IR."
+    },
+    {
+      "pattern": "^(.+?) place(?:s)? (?:veteran )?(?:QB|RB|WR|TE|LT|DE|DT|LB|CB|S) (.+?) on IR with (hamstring|knee|ankle|groin|glute|calf|shoulder|foot|toe|wrist|back) injury$",
+      "template": "{1} colocam {2} na IR por lesão em {b3}."
+    },
+    {
+      "pattern": "^(.+?) practices in full, plans to play (MNF|SNF|TNF)$",
+      "template": "{1} treinou sem limitações e pretende jogar no {2}."
+    },
+    {
+      "pattern": "^Fantasy football Week (\\d+) inactives: (.+?) out$",
+      "template": "Fantasy Football: {2} estão fora na Semana {1}."
+    },
+    {
+      "pattern": "^Fantasy football (flex and superflex|PPR and superflex) rankings (?:for )?Week (\\d+)$",
+      "template": "Ranking de Fantasy Football para a Semana {2}: {1}."
+    },
+    {
+      "pattern": "^Fantasy football rankings (?:for )?Week (\\d+): (Quarterback|Running back|Wide receiver|Tight end|Kicker|D/ST|IDP)$",
+      "template": "Ranking de Fantasy Football para a Semana {1}: {2}."
+    },
+    {
+      "pattern": "^(.+?) Week (\\d+) Outlook for Fantasy Football$",
+      "template": "Perspectiva de {1} para a Semana {2} do Fantasy Football."
+    },
+    {
+      "pattern": "^Who Should I Start for Fantasy Football Week (\\d+)\\?$",
+      "template": "Quem devo escalar no Fantasy Football na Semana {1}?"
+    },
+    {
+      "pattern": "^(.+?) (?:is )?ready for (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$",
+      "template": "{1} está pronto para o jogo {d2}."
+    }
+  ],
+  "inputPhrases": {
+    "fantasy football buzz": "fantasy football updates",
+    "hot offense": "offense in great form",
+    "red-hot offense": "offense in great form",
+    "offense": "attack",
+    "depth chart": "team lineup hierarchy",
+    "game-time decision": "decision shortly before the game",
+    "retain RB1 role": "remain the first-choice running back",
+    "streamers": "short-term fantasy starters"
+  },
+  "ptPhrases": {
+    "reserva de lesionados": "IR",
+    "ofensa": "ataque",
+    "ofensas": "ataques",
+    "ofensiva": "ataque",
+    "ofensivas": "ataques",
+    "ordem de profundidade": "hierarquia da escalação"
+  }
+}

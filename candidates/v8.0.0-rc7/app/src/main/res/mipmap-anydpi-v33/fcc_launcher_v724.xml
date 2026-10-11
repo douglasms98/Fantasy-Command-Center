@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/fcc_launcher_background_v724" />
+    <foreground android:drawable="@drawable/fcc_launcher_foreground_v724" />
+    <monochrome android:drawable="@drawable/fcc_monochrome_v724" />
+</adaptive-icon>
