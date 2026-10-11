@@ -857,5 +857,37 @@
       "real_google_login": "not_run",
       "android_changes": "none"
     }
+  },
+  {
+    "name": "FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip",
+    "created_at": "2026-10-11T00:27:15.966589Z",
+    "size_bytes": 1390208,
+    "sha256": "e3b69e19e3857171a62a3312fbfbdacc87c809a346304bcca63aebf3149d11d6",
+    "git_blob_sha": "3082a15514b1d7fea9ea9309cacd92b9ad61dc6d",
+    "path": "archive/candidates/FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip",
+    "status": "release_candidate_real_provider_reads_passed_cloud_android_pending",
+    "base_version": "7.3.2",
+    "inherits": "8.0.0-rc3",
+    "league_limit_per_user": 6,
+    "source_path": "candidates/v8.0.0-rc4",
+    "validation": {
+      "backend_tests": "59 passed (TEST_ONLY isolated fixtures)",
+      "javascript_suites": "5 passed (logic, dynamic weeks, accounts, Google, session restoration)",
+      "real_provider_reads": "passed (one public ESPN league and two Sleeper leagues; logos, opponents, history, roster, projections where supported, free agents and transactions)",
+      "real_payload_dom": "passed (three independent leagues; cached payload restoration, logo URLs, opponents, history, waivers and trade opponent selection)",
+      "source_parse": "passed (19 Python, 13 Java, 7 XML)",
+      "android_web_asset_match": "passed",
+      "bash_syntax": "passed",
+      "archive_crc": "passed",
+      "powershell_execution": "not_run",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run",
+      "real_google_login": "not_run",
+      "firebase_firestore_integration": "not_run",
+      "cloud_deployment": "not_run",
+      "cloud_translation": "not_run",
+      "private_espn_connection": "pending per-user authorization"
+    }
   }
 ]

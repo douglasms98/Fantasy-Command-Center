@@ -1,6 +1,6 @@
 # Índice de versões / Version index
 
-80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 6 novos ZIPs candidatos/correções: 86 artefatos. Nomes originais preservados.
+80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 7 novos ZIPs candidatos/correções: 87 artefatos. Nomes originais preservados.
 
 v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. As demais versões são históricas e não foram revalidadas neste arquivamento.
 
@@ -92,6 +92,7 @@ v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. A
 | 2026-10-10 | [FCC_v8_0_0_RC2_DYNAMIC_LEAGUES_LIMIT_6.zip](archive/candidates/FCC_v8_0_0_RC2_DYNAMIC_LEAGUES_LIMIT_6.zip) | release_candidate_cloud_setup_provider_android_pending |
 | 2026-10-10 | [FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip](archive/candidates/FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip) | release_candidate_google_setup_cloud_android_pending |
 | 2026-10-10 | [FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip](archive/candidates/FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip) | cloud_auth_script_fix_real_deployment_pending |
+| 2026-10-11 | [FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip](archive/candidates/FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip) | release_candidate_real_provider_reads_passed_cloud_android_pending |
 
 ## v7.3.4 RC1
 
@@ -117,3 +118,8 @@ Patch baseado na v7.3.2. [Alterações, instalação e limitações](candidates/
 ## Correção Cloud da v8.0.0 RC3
 
 [Detalhes e comandos para retomar o deploy](fixes/v8.0.0-rc3-cloud-auth/README_CLOUD_AUTH_FIX.md). A consulta ao Firebase agora informa explicitamente o projeto de cota por x-goog-user-project e distingue motivos de erro conhecidos sem imprimir credenciais. O wrapper publica o backend original da RC3, preservando seus fontes e ZIP. 10 testes Python com fixtures TEST_ONLY, parsing Python e sintaxe Bash passaram. O HTTP 403 original não trouxe o motivo detalhado; a causa exata e a execução real do deploy continuam pendentes. Correção apenas de scripts Cloud, sem mudanças no Android.
+
+
+## v8.0.0 RC4
+
+[Sessão persistente, dados no Cloud e instalação](candidates/v8.0.0-rc4/README_v8_0_0_RC4.md). Reabre o Android com o perfil/cache do próprio UID antes de renovar a sessão, melhora a entrada e recupera logos, adversários, histórico, waivers, movimentações e projeções pelo Cloud, sem planilhas pessoais. Corrige o placar vivo ESPN, recalcula fatos públicos NFL conforme cada liga Sleeper e mantém dados indisponíveis quando a regra não pode ser calculada. Notícias usam feed geral com filtro interno; tradução Cloud é opcional. Interface dinâmica de zero a seis ligas preservada. 59 testes Python, cinco suítes JavaScript e análise de 19 Python/13 Java/7 XML passaram. Leituras reais de uma liga ESPN pública e duas Sleeper e sua conferência DOM passaram. Deploy RC4, login real, PowerShell/Gradle, renderização visual e entrega no aparelho permanecem pendentes. Patch Android e backend, sem APK; v7.3.2 permanece a referência até a homologação completa.
