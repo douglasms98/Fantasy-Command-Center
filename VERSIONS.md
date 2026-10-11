@@ -1,6 +1,6 @@
 # Índice de versões / Version index
 
-80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 7 novos ZIPs candidatos/correções: 87 artefatos. Nomes originais preservados.
+80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 8 novos ZIPs candidatos/correções: 88 artefatos. Nomes originais preservados.
 
 v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. As demais versões são históricas e não foram revalidadas neste arquivamento.
 
@@ -93,6 +93,7 @@ v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. A
 | 2026-10-10 | [FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip](archive/candidates/FCC_v8_0_0_RC3_GOOGLE_LOGIN.zip) | release_candidate_google_setup_cloud_android_pending |
 | 2026-10-10 | [FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip](archive/candidates/FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip) | cloud_auth_script_fix_real_deployment_pending |
 | 2026-10-11 | [FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip](archive/candidates/FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip) | release_candidate_real_provider_reads_passed_cloud_android_pending |
+| 2026-10-11 | [FCC_v8_0_0_RC5_PERFORMANCE_SLEEPER_PROJECTIONS.zip](archive/candidates/FCC_v8_0_0_RC5_PERFORMANCE_SLEEPER_PROJECTIONS.zip) | release_candidate_performance_sleeper_projections_real_reads_passed_cloud_android_pending |
 
 ## v7.3.4 RC1
 
@@ -123,3 +124,8 @@ Patch baseado na v7.3.2. [Alterações, instalação e limitações](candidates/
 ## v8.0.0 RC4
 
 [Sessão persistente, dados no Cloud e instalação](candidates/v8.0.0-rc4/README_v8_0_0_RC4.md). Reabre o Android com o perfil/cache do próprio UID antes de renovar a sessão, melhora a entrada e recupera logos, adversários, histórico, waivers, movimentações e projeções pelo Cloud, sem planilhas pessoais. Corrige o placar vivo ESPN, recalcula fatos públicos NFL conforme cada liga Sleeper e mantém dados indisponíveis quando a regra não pode ser calculada. Notícias usam feed geral com filtro interno; tradução Cloud é opcional. Interface dinâmica de zero a seis ligas preservada. 59 testes Python, cinco suítes JavaScript e análise de 19 Python/13 Java/7 XML passaram. Leituras reais de uma liga ESPN pública e duas Sleeper e sua conferência DOM passaram. Deploy RC4, login real, PowerShell/Gradle, renderização visual e entrega no aparelho permanecem pendentes. Patch Android e backend, sem APK; v7.3.2 permanece a referência até a homologação completa.
+
+
+## v8.0.0 RC5
+
+[Desempenho, projeções Sleeper e instalação](candidates/v8.0.0-rc5/README_v8_0_0_RC5.md). Reutiliza cálculos de roster/waivers/calendário em cada renderização, coalesce leituras da API, evita recalcular snapshots sem mudanças e comprime transporte Android/web. Acrescenta projeções semanais publicadas pelo Sleeper, recalculadas por scoring; presets padrão e estimativas parciais são identificados separadamente. Estimativas incompletas não entram no otimizador ou na probabilidade. Preserva sessão, zero a seis ligas por conta, logos, adversários, histórico, jogadores disponíveis, movimentações, calendário e alertas no Cloud, sem planilhas pessoais. 66 testes Python, seis suítes JavaScript, parsing de 20 Python/13 Java/7 XML e conferência dos assets passaram. Leituras reais de uma ESPN pública e duas Sleeper e seu DOM passaram. Testes locais: trocar telas caiu de cerca de 2,6 s para 0,17 s; gzip reduziu um payload real em cerca de 91%. Não são medidas no telefone/navegador do usuário. Deploy RC5, login real, PowerShell/Gradle, renderização visual e entrega no aparelho permanecem pendentes; os logs do usuário confirmaram o deploy anterior da RC4. Patch Android e backend, sem APK; v7.3.2 permanece a referência até homologação completa.

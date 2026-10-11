@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FCC.V724" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">@color/fcc_accent_v724</item>
+        <item name="android:statusBarColor">@color/fcc_theme_background_v724</item>
+        <item name="android:navigationBarColor">@color/fcc_theme_background_v724</item>
+        <item name="android:windowBackground">@color/fcc_theme_background_v724</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

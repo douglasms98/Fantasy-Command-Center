@@ -889,5 +889,40 @@
       "cloud_translation": "not_run",
       "private_espn_connection": "pending per-user authorization"
     }
+  },
+  {
+    "name": "FCC_v8_0_0_RC5_PERFORMANCE_SLEEPER_PROJECTIONS.zip",
+    "created_at": "2026-10-11T01:57:24.785935Z",
+    "size_bytes": 1398321,
+    "sha256": "c7062c4346af3700bc1e29f1a653c28ec19136fdfff695ef708bcbe99f814de7",
+    "git_blob_sha": "231dfb0d62b1c94695488a7bdbeda2e186aed2d4",
+    "path": "archive/candidates/FCC_v8_0_0_RC5_PERFORMANCE_SLEEPER_PROJECTIONS.zip",
+    "status": "release_candidate_performance_sleeper_projections_real_reads_passed_cloud_android_pending",
+    "base_version": "7.3.2",
+    "inherits": "8.0.0-rc4",
+    "league_limit_per_user": 6,
+    "source_path": "candidates/v8.0.0-rc5",
+    "validation": {
+      "backend_tests": "66 passed (TEST_ONLY isolated fixtures)",
+      "javascript_suites": "6 passed (logic, dynamic weeks, accounts, Google, session restoration, performance)",
+      "real_provider_reads": "passed (one public ESPN league and two Sleeper leagues; opponents, logo URLs, history, rosters, free agents, transactions and published weekly Sleeper projections)",
+      "real_payload_dom": "passed (three real normalized league payloads; native Sleeper published preset values, partial scoring labels, rosters, opponents, history, waivers and trade opponent options)",
+      "local_dom_performance": "same-data tab changes: RC4 2.56–2.84 s, RC5 0.16–0.19 s; device/browser performance not measured",
+      "gzip_payload": "real updated three-league payload: approximately 2.07 MB to 179 KB (91% smaller)",
+      "source_parse": "passed (20 Python, 13 Java, 7 XML)",
+      "android_web_asset_match": "passed",
+      "bash_syntax": "passed",
+      "archive_crc": "passed",
+      "powershell_execution": "not_run",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run",
+      "real_google_login": "not_run",
+      "firebase_firestore_integration": "not_run",
+      "cloud_deployment": "RC5 not_run; previous RC4 deployment confirmed in user logs",
+      "cloud_translation": "not_run",
+      "private_espn_connection": "pending per-user authorization",
+      "special_sleeper_scoring": "published standard preset shown separately; unsupported custom rules labeled partial and excluded from optimizer/probability"
+    }
   }
 ]
