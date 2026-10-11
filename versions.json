@@ -924,5 +924,41 @@
       "private_espn_connection": "pending per-user authorization",
       "special_sleeper_scoring": "published standard preset shown separately; unsupported custom rules labeled partial and excluded from optimizer/probability"
     }
+  },
+  {
+    "name": "FCC_v8_0_0_RC6_PUBLIC_DATA_INCREMENTAL_SYNC.zip",
+    "created_at": "2026-10-11T02:51:17.720643Z",
+    "size_bytes": 1416633,
+    "sha256": "3513963fe4f404e0c03653f0406a7527b2b01018ebeb71f6f5eff3a03594131c",
+    "git_blob_sha": "15dd4461fb5fada736599d1a0b6b1259791249f5",
+    "path": "archive/candidates/FCC_v8_0_0_RC6_PUBLIC_DATA_INCREMENTAL_SYNC.zip",
+    "status": "release_candidate_nflverse_incremental_real_reads_passed_cloud_android_pending",
+    "base_version": "7.3.2",
+    "inherits": "8.0.0-rc5",
+    "league_limit_per_user": 6,
+    "source_path": "candidates/v8.0.0-rc6",
+    "validation": {
+      "backend_tests": "84 passed (TEST_ONLY isolated fixtures)",
+      "javascript_suites": "7 passed (logic, dynamic weeks, accounts, Google, session restoration, performance, public player facts)",
+      "source_parse": "passed (22 Python, 13 Java, 7 XML)",
+      "android_web_asset_match": "passed",
+      "bash_syntax": "passed",
+      "archive_crc": "passed",
+      "real_provider_reads": "passed (one public ESPN league and two Sleeper leagues; logos, opponents, history, rosters, free agents, transactions and published Sleeper projections)",
+      "real_nflverse_reads": "passed (generic players/stats/snaps files; 8682 offensive player records, 4512 season stats rows and 6064 snap rows; joined inside Cloud by IDs)",
+      "enrichment_coverage": "observed recent usage: Sleeper 14/15 and 23/25 eligible players, ESPN 13/14; missing facts stay missing",
+      "incremental_storage": "passed with TEST_ONLY Firestore double: one changed waiver writes one block; unchanged recheck writes no revision/blocks; legacy migration, UID isolation, re-registration and cleanup guards",
+      "local_dom_performance": "real enriched three-league payload; approximately 0.17–0.21 s tab changes and 1.55 s bootstrap; device/browser performance not measured",
+      "powershell_execution": "not_run",
+      "android_build": "not_run",
+      "device": "not_run",
+      "visual_render": "not_run",
+      "real_google_login": "not_run",
+      "firebase_firestore_integration": "not_run",
+      "cloud_deployment": "RC6 not_run; previous RC4 deployment confirmed in user logs",
+      "cloud_translation": "not_run",
+      "private_espn_connection": "pending per-user authorization",
+      "cost_scope": "public data sources without paid API subscription; no new paid service enabled; existing Google Cloud usage remains subject to quotas and billing"
+    }
   }
 ]

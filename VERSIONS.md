@@ -1,6 +1,6 @@
 # Índice de versões / Version index
 
-80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 8 novos ZIPs candidatos/correções: 88 artefatos. Nomes originais preservados.
+80 arquivos recuperados (44 ZIPs e 36 HTMLs) e 9 novos ZIPs candidatos/correções: 89 artefatos. Nomes originais preservados.
 
 v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. As demais versões são históricas e não foram revalidadas neste arquivamento.
 
@@ -94,6 +94,8 @@ v7.3.2 é a referência atual. v7.3.3 foi descartada por usar dados simulados. A
 | 2026-10-10 | [FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip](archive/candidates/FCC_v8_0_0_RC3_CLOUD_AUTH_FIX.zip) | cloud_auth_script_fix_real_deployment_pending |
 | 2026-10-11 | [FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip](archive/candidates/FCC_v8_0_0_RC4_SESSION_API_DATA_FIX.zip) | release_candidate_real_provider_reads_passed_cloud_android_pending |
 | 2026-10-11 | [FCC_v8_0_0_RC5_PERFORMANCE_SLEEPER_PROJECTIONS.zip](archive/candidates/FCC_v8_0_0_RC5_PERFORMANCE_SLEEPER_PROJECTIONS.zip) | release_candidate_performance_sleeper_projections_real_reads_passed_cloud_android_pending |
+| 2026-10-11 | [FCC_v8_0_0_RC6_PUBLIC_DATA_INCREMENTAL_SYNC.zip](archive/candidates/FCC_v8_0_0_RC6_PUBLIC_DATA_INCREMENTAL_SYNC.zip) | release_candidate_nflverse_incremental_real_reads_passed_cloud_android_pending |
+
 
 ## v7.3.4 RC1
 
@@ -129,3 +131,8 @@ Patch baseado na v7.3.2. [Alterações, instalação e limitações](candidates/
 ## v8.0.0 RC5
 
 [Desempenho, projeções Sleeper e instalação](candidates/v8.0.0-rc5/README_v8_0_0_RC5.md). Reutiliza cálculos de roster/waivers/calendário em cada renderização, coalesce leituras da API, evita recalcular snapshots sem mudanças e comprime transporte Android/web. Acrescenta projeções semanais publicadas pelo Sleeper, recalculadas por scoring; presets padrão e estimativas parciais são identificados separadamente. Estimativas incompletas não entram no otimizador ou na probabilidade. Preserva sessão, zero a seis ligas por conta, logos, adversários, histórico, jogadores disponíveis, movimentações, calendário e alertas no Cloud, sem planilhas pessoais. 66 testes Python, seis suítes JavaScript, parsing de 20 Python/13 Java/7 XML e conferência dos assets passaram. Leituras reais de uma ESPN pública e duas Sleeper e seu DOM passaram. Testes locais: trocar telas caiu de cerca de 2,6 s para 0,17 s; gzip reduziu um payload real em cerca de 91%. Não são medidas no telefone/navegador do usuário. Deploy RC5, login real, PowerShell/Gradle, renderização visual e entrega no aparelho permanecem pendentes; os logs do usuário confirmaram o deploy anterior da RC4. Patch Android e backend, sem APK; v7.3.2 permanece a referência até homologação completa.
+
+
+## v8.0.0 RC6
+
+[Dados NFL públicos, sincronização incremental e instalação](candidates/v8.0.0-rc6/README_v8_0_0_RC6.md). Acrescenta nflverse (uso recente, snaps e draft NFL), contexto do quarterback e gravação dos blocos alterados no Firestore. Snapshots idênticos mantêm sua revisão; os antigos migram sem recriar usuários/ligas. Preserva o isolamento por UID, seis ligas, Google, sessão e desempenho. 84 testes Python, sete suítes JavaScript e leituras reais de uma liga ESPN pública, duas Sleeper e três arquivos NFL públicos passaram. Fontes não exigem assinatura paga, mas cotas/cobrança Cloud continuam aplicáveis. Firestore real, deploy RC6, Windows/Android, login e notificações no dispositivo permanecem pendentes; v7.3.2 continua como referência. ZIP de fontes e backend, sem APK.
