@@ -9,24 +9,39 @@ def parse_time(value):
 def apply_calendar(league,calendar):
     week=int(league.get('sourceAnalysisWeek') or 0)
     block=next((w for w in calendar.get('weeks',[]) if w.get('week')==week),{})
-    games={team:g for g in block.get('games',[]) for team in (g.get('home'),g.get('away'))}
+    games={team_code(team):g for g in block.get('games',[]) for team in (g.get('home'),g.get('away'))}
     if not games:return
+    # Normalize once across both providers; roster and allRosters may contain distinct copies.
     for p in league.get('roster',[])+league.get('waivers',[])+league.get('_allRosters',[]):
-        g=games.get(p.get('nfl'))
+        team=team_code(p.get('nfl'))
+        g=games.get(team)
+        # A new week must not retain a previous BYE classification.
+        p.pop('byeWeek',None)
         if g:
             p['kickoffAt']=g.get('startTime');p['gameCompleted']=g.get('completed') is True;p['gameLive']=g.get('live') is True
-        elif block.get('complete') and team_code(p.get('nfl')) in NFL_TEAMS:
+            # An official OUT means zero future playing opportunity in this matchup,
+            # but never overwrite a real score for a live or completed contest.
+            status=str(p.get('injuryStatus') or '').strip().upper()
+            if status in ('OUT','O') and not p['gameCompleted'] and not p['gameLive']:
+                p['currentProjection']=0.0
+                p['projectionEstimate']=None
+                p['projectionMissingStats']=[]
+                p['projectionSource']='FCC • OUT confirmado (jogo ainda não iniciado)'
+        elif block.get('complete') and team in NFL_TEAMS:
             p['byeWeek']=week;p['currentProjection']=0.0
+            p['projectionEstimate']=None;p['projectionMissingStats']=[]
+            p['projectionSource']='FCC • BYE confirmado pelo calendário'
     matchup=league.get('matchup')
     if not matchup:return
     for prefix,name in [('my',league['team']),('opp',matchup.get('oppTeam'))]:
         team_id=str(league.get('teamId') if prefix=='my' else matchup.get('oppTeamId') or '')
         starters=[p for p in league.get('_allRosters',[]) if
                   (str(p.get('_teamId'))==team_id if p.get('_teamId') is not None and team_id else p.get('_team')==name) and p.get('slot')=='Starter']
-        known=[p for p in starters if p.get('nfl') in games or (block.get('complete') and team_code(p.get('nfl')) in NFL_TEAMS)]
+        known=[p for p in starters if team_code(p.get('nfl')) in games or (block.get('complete') and team_code(p.get('nfl')) in NFL_TEAMS)]
         if starters and len(known)==len(starters):matchup[prefix+'Remaining']=sum(not p.get('gameCompleted') and p.get('byeWeek')!=week for p in starters)
         if league['platform']=='Sleeper' and starters:
             matchup.pop(prefix+'Projection',None);matchup.pop(prefix+'ProjectionEstimate',None)
+            matchup.pop(prefix+'ProjectionCoverage',None)
             values=[p.get('currentPoints') if p.get('gameCompleted') else p.get('currentProjection') for p in starters]
             coverage={'known':sum(v is not None for v in values),'total':len(starters),
                       'missingRules':sorted({k for p in starters if not p.get('gameCompleted') for k in p.get('projectionMissingStats',[])})}
