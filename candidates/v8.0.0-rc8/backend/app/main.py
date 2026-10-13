@@ -15,7 +15,7 @@ from .providers import Providers, LeagueInput
 from .service import Service, public, league_quota
 from .calendar import Calendar
 
-app=FastAPI(title='FCC contas e ligas',version='8.0.0-rc7')
+app=FastAPI(title='FCC contas e ligas',version='8.0.0-rc8')
 s=settings()
 app.add_middleware(CORSMiddleware,allow_origins=s.origins(),allow_credentials=True,allow_methods=['GET','POST','PUT','DELETE'],allow_headers=['Authorization','Content-Type','X-FCC-Web'])
 app.add_middleware(GZipMiddleware,minimum_size=1024,compresslevel=4)
@@ -58,7 +58,7 @@ def web_session(response,result):
     return {k:v for k,v in result.items() if k!='refreshToken'}
 
 @app.get('/health')
-def health():return {'ok':True,'version':'8.0.0-rc7','role':s.FCC_ROLE,'at':now(),'authConfigured':bool(s.FCC_GCP_PROJECT and s.FCC_FIREBASE_API_KEY),'googleConfigured':s.google_enabled()}
+def health():return {'ok':True,'version':'8.0.0-rc8','role':s.FCC_ROLE,'at':now(),'authConfigured':bool(s.FCC_GCP_PROJECT and s.FCC_FIREBASE_API_KEY),'googleConfigured':s.google_enabled()}
 
 if s.FCC_ROLE=='api':
     @app.get('/v2/auth/google/config')
