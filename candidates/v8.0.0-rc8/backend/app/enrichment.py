@@ -22,7 +22,7 @@ def apply_calendar(league,calendar):
             # An official OUT means zero future playing opportunity in this matchup,
             # but never overwrite a real score for a live or completed contest.
             status=str(p.get('injuryStatus') or '').strip().upper()
-            if status in ('OUT','O') and not p['gameCompleted'] and not p['gameLive']:
+            if league.get('platform')=='Sleeper' and status in ('OUT','O') and not p['gameCompleted'] and not p['gameLive']:
                 p['currentProjection']=0.0
                 p['projectionEstimate']=None
                 p['projectionMissingStats']=[]
