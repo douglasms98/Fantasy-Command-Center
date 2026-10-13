@@ -95,7 +95,7 @@ class Service:
             sources.append({'id':row['id'],'status':row.get('status'),'updatedAt':row.get('lastCheckedAt') or row.get('lastSuccessAt'),'changedAt':row.get('lastChangedAt'),'error':row.get('lastError','')})
         loaded=[l for l in leagues if l.get('loaded')]
         meta={'loadedCount':len(loaded),'pendingCount':len(leagues)-len(loaded),'combinedWins':sum(l.get('user',{}).get('wins') or 0 for l in loaded),'combinedLosses':sum(l.get('user',{}).get('losses') or 0 for l in loaded),
-              'sourceAnalysisWeek':max([int(l.get('sourceAnalysisWeek') or 0) for l in loaded]+[0]),'historyThroughWeek':max([int(l.get('confirmedThroughWeek') or 0) for l in loaded]+[0]),'methodVersion':'v8.0.0-rc7-cloud-data',**league_quota(len(bindings))}
+              'sourceAnalysisWeek':max([int(l.get('sourceAnalysisWeek') or 0) for l in loaded]+[0]),'historyThroughWeek':max([int(l.get('confirmedThroughWeek') or 0) for l in loaded]+[0]),'methodVersion':'v8.0.0-rc8-cloud-data',**league_quota(len(bindings))}
         # No inherited default league, account-independent snapshot or pending league.
         seasons=[int(r['season']) for r in bindings if r.get('season')]
         data={'season':max(seasons) if seasons else datetime.now(timezone.utc).year,'leagues':leagues,'meta':meta,'online':{'news':[],'nflWeeks':[]},'notificationEvents':[]}
