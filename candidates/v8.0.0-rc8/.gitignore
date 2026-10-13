@@ -1,0 +1,12 @@
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.local
+*.pem
+*.key
+service-account*.json
+credentials*.json
+approved-bindings*.json
+fcc_backup_*/
